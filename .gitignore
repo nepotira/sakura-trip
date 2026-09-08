@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+
+# Sensitive API Keys & local config
+.env
+data/config.json
+
+# Logs & System
+*.log
+.system_generated/
+.DS_Store
+Thumbs.db
