@@ -350,8 +350,63 @@ document.addEventListener('DOMContentLoaded', () => {
             inputDatesEl.value = lang === 'ja' ? '2027年4月10日〜20日' : (lang === 'en' ? '04/10/2027 to 04/20/2027' : '10/04/2027 a 20/04/2027');
         }
 
+        // Localize chat input & lookup placeholder
+        const chatInputEl = document.getElementById('chatInput');
+        if (chatInputEl) {
+            chatInputEl.placeholder = lang === 'ja' ? 'さゆりに日本旅行について質問する...' : (lang === 'en' ? 'Ask Sayuri anything about the trip...' : 'Faça uma pergunta para a Sayuri...');
+        }
+        const lookupInputEl = document.getElementById('lookupInput');
+        if (lookupInputEl) {
+            lookupInputEl.placeholder = lang === 'ja' ? '例: SKR-JP2027-993 または 身分証番号' : (lang === 'en' ? 'Ex: SKR-JP2027-993 or Tax ID' : 'Ex: SKR-JP2027-993 ou 123.456.789-00');
+        }
+
+        // Localize Sayuri floating speech bubble
+        const assistantBubble = document.getElementById('assistantBubble');
+        if (assistantBubble) {
+            const bubbleText = assistantBubble.querySelector('.bubble-text');
+            if (bubbleText && dict['sayuri_bubble']) {
+                bubbleText.innerHTML = dict['sayuri_bubble'];
+            }
+        }
+
+        // Localize Sayuri initial chat messages if user hasn't chatted yet
+        if (state.chatHistory.length === 0) {
+            const botMsgs = document.querySelectorAll('#chatMessagesArea .chat-msg.bot .msg-bubble');
+            if (botMsgs[0] && dict['sayuri_msg_welcome1']) botMsgs[0].innerHTML = dict['sayuri_msg_welcome1'];
+            if (botMsgs[1] && dict['sayuri_msg_welcome2']) botMsgs[1].innerHTML = dict['sayuri_msg_welcome2'];
+        }
+
+        // Localize installment options in checkout modal
+        const installmentsSelect = document.getElementById('installmentsSelect');
+        if (installmentsSelect) {
+            const opts = installmentsSelect.querySelectorAll('option');
+            if (opts.length >= 4) {
+                opts[0].textContent = lang === 'ja' ? '1回払い（手数料無料）' : (lang === 'en' ? '1x lump sum interest-free' : '1x à vista sem juros');
+                opts[1].textContent = lang === 'ja' ? '6回分割（手数料無料）' : (lang === 'en' ? '6x interest-free' : '6x sem juros');
+                opts[2].textContent = lang === 'ja' ? '10回分割（手数料無料）' : (lang === 'en' ? '10x interest-free' : '10x sem juros');
+                opts[3].textContent = lang === 'ja' ? '12回分割（手数料無料）' : (lang === 'en' ? '12x interest-free' : '12x sem juros');
+            }
+        }
+
+        // Localize room selection buttons in catalog
+        document.querySelectorAll('.btn-select-room').forEach(btn => {
+            const card = btn.closest('.room-card');
+            if (!card) return;
+            const roomId = card.getAttribute('data-room-id');
+            const isSelected = (state.selectedRoom && state.selectedRoom.id === roomId);
+            const span = btn.querySelector('span');
+            if (span) {
+                span.textContent = isSelected ? (dict['room_selected_state'] || 'Quarto Selecionado') : (dict['btn_select_room'] || 'Selecionar Quarto');
+            }
+        });
+
         // Translate traveler summary pill
         updateTravelersSummary();
+
+        // Translate checklist progress caption
+        if (typeof updateChecklistProgress === 'function') {
+            updateChecklistProgress();
+        }
 
         // Re-align sliding indicator after text length change
         setTimeout(() => {
@@ -714,8 +769,25 @@ document.addEventListener('DOMContentLoaded', () => {
             radio.closest('.room-radio-option').classList.add('selected');
         }
 
+        // Update button visual states
+        const dict = (window.I18N_DICTIONARY && window.I18N_DICTIONARY[state.lang]) ? window.I18N_DICTIONARY[state.lang] : window.I18N_DICTIONARY['pt'];
+        document.querySelectorAll('.btn-select-room').forEach(btn => {
+            const card = btn.closest('.room-card');
+            if (!card) return;
+            const rid = card.getAttribute('data-room-id');
+            const span = btn.querySelector('span');
+            if (span) {
+                if (rid === roomId) {
+                    span.textContent = dict['room_selected_state'] || 'Quarto Selecionado';
+                } else {
+                    span.textContent = dict['btn_select_room'] || 'Selecionar Quarto';
+                }
+            }
+        });
+
         updateCheckoutCalculations();
-        showToast(`Quarto selecionado: ${info.name}`);
+        const toastMsg = state.lang === 'ja' ? `客室を選択しました: ${info.name}` : (state.lang === 'en' ? `Room selected: ${info.name}` : `Quarto selecionado: ${info.name}`);
+        showToast(toastMsg);
     }
 
     document.querySelectorAll('.btn-select-room').forEach(btn => {
@@ -1493,10 +1565,16 @@ document.addEventListener('DOMContentLoaded', () => {
         if (progressBarFill) progressBarFill.style.width = `${pct}%`;
 
         if (progressCaption) {
-            if (pct === 0) progressCaption.textContent = "Marque os itens conforme for organizando sua bagagem!";
-            else if (pct < 50) progressCaption.textContent = "Bom começo! Continue organizando seus itens essenciais.";
-            else if (pct < 100) progressCaption.textContent = "Quase tudo pronto para embarcar rumo ao Japão! 🌸";
-            else progressCaption.textContent = "Mala 100% pronta! Você está preparado para o Japão! ✈️🇯🇵";
+            const lang = state.lang || 'pt';
+            if (pct === 0) {
+                progressCaption.textContent = lang === 'ja' ? "荷物のパッキングに合わせてチェックを入れましょう！" : (lang === 'en' ? "Check the items as you pack your luggage!" : "Marque os itens conforme for organizando sua bagagem!");
+            } else if (pct < 50) {
+                progressCaption.textContent = lang === 'ja' ? "順調です！必要なアイテムを揃えていきましょう。" : (lang === 'en' ? "Great start! Keep packing your essential items." : "Bom começo! Continue organizando seus itens essenciais.");
+            } else if (pct < 100) {
+                progressCaption.textContent = lang === 'ja' ? "出発の準備はほぼ完了です！🌸" : (lang === 'en' ? "Almost ready to fly to Japan! 🌸" : "Quase tudo pronto para embarcar rumo ao Japão! 🌸");
+            } else {
+                progressCaption.textContent = lang === 'ja' ? "パッキング完了！日本への旅の準備は万全です！✈️🇯🇵" : (lang === 'en' ? "Luggage 100% ready! You are prepared for Japan! ✈️🇯🇵" : "Mala 100% pronta! Você está preparado para o Japão! ✈️🇯🇵");
+            }
         }
 
         localStorage.setItem('sakura_checklist', JSON.stringify(state.checklist));

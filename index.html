@@ -31,7 +31,7 @@
             </p>
             <div class="announcement-actions">
                 <span class="currency-selector-wrapper">
-                    <i class="fa-solid fa-coins"></i> <span class="lbl-cur">Moeda:</span>
+                    <i class="fa-solid fa-coins"></i> <span class="lbl-cur" data-i18n="lbl_currency">Moeda:</span>
                     <select id="currencySelector" aria-label="Seletor de Moeda">
                         <option value="USD" selected>USD ($) Dólar</option>
                         <option value="BRL">BRL (R$) Real</option>
@@ -81,24 +81,24 @@
                     <!-- NOTIFICATIONS DROPDOWN POPOVER (PROPERLY NESTED & HIDDEN BY DEFAULT) -->
                     <div class="dropdown-popover" id="notificationsPopover">
                         <div class="popover-header">
-                            <h4><i class="fa-solid fa-bell text-sakura"></i> Avisos da Viagem</h4>
+                            <h4><i class="fa-solid fa-bell text-sakura"></i> <span data-i18n="notif_header">Avisos da Viagem</span></h4>
                             <button class="btn-close-sm" id="btnCloseNotifications">&times;</button>
                         </div>
                         <div class="popover-body">
                             <div class="popover-item unread">
                                 <div class="item-icon"><i class="fa-solid fa-calendar-days"></i></div>
                                 <div class="item-text">
-                                    <p class="title">Prazo de Inscrição Próximo!</p>
-                                    <p class="desc">As reservas para o pacote de Abril/2027 encerram em 10 de Janeiro.</p>
-                                    <span class="time">Restam poucas vagas</span>
+                                    <p class="title" data-i18n="notif_deadline_title">Prazo de Inscrição Próximo!</p>
+                                    <p class="desc" data-i18n="notif_deadline_desc">As reservas para o pacote de Abril/2027 encerram em 10 de Janeiro.</p>
+                                    <span class="time" data-i18n="notif_deadline_time">Restam poucas vagas</span>
                                 </div>
                             </div>
                             <div class="popover-item">
                                 <div class="item-icon"><i class="fa-solid fa-tags"></i></div>
                                 <div class="item-text">
-                                    <p class="title">Cupom de Desconto Ativo</p>
-                                    <p class="desc">Use o cupom <strong>SAKURA10</strong> e ganhe US$ 50,00 de desconto no pacote.</p>
-                                    <span class="time">Válido hoje</span>
+                                    <p class="title" data-i18n="notif_coupon_title">Cupom de Desconto Ativo</p>
+                                    <p class="desc" data-i18n="notif_coupon_desc">Use o cupom <strong>SAKURA10</strong> e ganhe US$ 50,00 de desconto no pacote.</p>
+                                    <span class="time" data-i18n="notif_coupon_time">Válido hoje</span>
                                 </div>
                             </div>
                         </div>
@@ -126,10 +126,10 @@
                                 <small id="dropdownEmail">lucas.viajante@gmail.com</small>
                             </div>
                             <ul class="dropdown-menu-list">
-                                <li><a href="javascript:void(0)" id="btnOpenMyBookings"><i class="fa-solid fa-ticket"></i> Minhas Reservas</a></li>
-                                <li><a href="javascript:void(0)" id="btnOpenProfileSettings"><i class="fa-solid fa-user-gear"></i> Meus Dados & Documentos</a></li>
+                                <li><a href="javascript:void(0)" id="btnOpenMyBookings" data-i18n="user_my_bookings"><i class="fa-solid fa-ticket"></i> Minhas Reservas</a></li>
+                                <li><a href="javascript:void(0)" id="btnOpenProfileSettings" data-i18n="user_my_docs"><i class="fa-solid fa-user-gear"></i> Meus Dados & Documentos</a></li>
                                 <li class="divider"></li>
-                                <li><a href="javascript:void(0)" class="text-danger" id="btnLogout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sair</a></li>
+                                <li><a href="javascript:void(0)" class="text-danger" id="btnLogout" data-i18n="user_logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sair</a></li>
                             </ul>
                         </div>
                     </div>
@@ -179,8 +179,8 @@
                             <div class="travelers-dropdown-panel" id="travelersDropdownPanel">
                                 <div class="traveler-row">
                                     <div>
-                                        <div class="label">Adultos</div>
-                                        <div class="sub">Acima de 12 anos</div>
+                                        <div class="label" data-i18n="traveler_adults">Adultos</div>
+                                        <div class="sub" data-i18n="traveler_adults_sub">Acima de 12 anos</div>
                                     </div>
                                     <div class="stepper">
                                         <button class="step-btn" id="decAdults" aria-label="Diminuir Adultos">-</button>
@@ -190,8 +190,8 @@
                                 </div>
                                 <div class="traveler-row">
                                     <div>
-                                        <div class="label">Crianças</div>
-                                        <div class="sub">2 a 11 anos</div>
+                                        <div class="label" data-i18n="traveler_children">Crianças</div>
+                                        <div class="sub" data-i18n="traveler_children_sub">2 a 11 anos</div>
                                     </div>
                                     <div class="stepper">
                                         <button class="step-btn" id="decChildren" aria-label="Diminuir Crianças">-</button>
@@ -201,8 +201,8 @@
                                 </div>
                                 <div class="traveler-row">
                                     <div>
-                                        <div class="label">Bebês</div>
-                                        <div class="sub">Até 23 meses (colo)</div>
+                                        <div class="label" data-i18n="traveler_infants">Bebês</div>
+                                        <div class="sub" data-i18n="traveler_infants_sub">Até 23 meses (colo)</div>
                                     </div>
                                     <div class="stepper">
                                         <button class="step-btn" id="decInfants" aria-label="Diminuir Bebês">-</button>
@@ -211,7 +211,7 @@
                                     </div>
                                 </div>
                                 <div class="traveler-actions">
-                                    <button class="btn btn-sm btn-primary w-100" id="btnConfirmTravelers">Concluir</button>
+                                    <button class="btn btn-sm btn-primary w-100" id="btnConfirmTravelers" data-i18n="btn_confirm_travelers">Concluir</button>
                                 </div>
                             </div>
                         </div>
@@ -564,9 +564,9 @@
                             <h3><i class="fa-solid fa-ferris-wheel text-sakura"></i> <span data-i18n="pillar1_title">Parques Temáticos</span></h3>
                             <p data-i18n="pillar1_desc">Visite <strong>Tokyo Disneyland</strong>, <strong>Tokyo DisneySea</strong> e <strong>Universal Studios Japan</strong> (com a incrível área de Super Nintendo World e Harry Potter).</p>
                             <ul class="pillar-list">
-                                <li>Tokyo Disneyland & DisneySea</li>
-                                <li>Universal Studios Japan (Osaka)</li>
-                                <li>Atrações temáticas exclusivas</li>
+                                <li data-i18n="pillar1_li1">Tokyo Disneyland & DisneySea</li>
+                                <li data-i18n="pillar1_li2">Universal Studios Japan (Osaka)</li>
+                                <li data-i18n="pillar1_li3">Atrações temáticas exclusivas</li>
                             </ul>
                         </div>
                     </div>
@@ -580,9 +580,9 @@
                             <h3><i class="fa-solid fa-fan text-sakura"></i> <span data-i18n="pillar2_title">Cultura & Tradição</span></h3>
                             <p data-i18n="pillar2_desc">Vivencie a essência milenar japonesa visitando <strong>templos históricos, santuários sagrados, cerimônias tradicionais do chá</strong> e a experiência com kimonos autênticos.</p>
                             <ul class="pillar-list">
-                                <li>Templos e Santuários Xintoístas</li>
-                                <li>Cerimônias Tradicionais do Chá</li>
-                                <li>Experiência com Kimonos e Yukatas</li>
+                                <li data-i18n="pillar2_li1">Templos e Santuários Xintoístas</li>
+                                <li data-i18n="pillar2_li2">Cerimônias Tradicionais do Chá</li>
+                                <li data-i18n="pillar2_li3">Experiência com Kimonos e Yukatas</li>
                             </ul>
                         </div>
                     </div>
@@ -596,9 +596,9 @@
                             <h3><i class="fa-solid fa-bowl-food text-sakura"></i> <span data-i18n="pillar3_title">Culinária Autêntica</span></h3>
                             <p data-i18n="pillar3_desc">Deguste o melhor da gastronomia mundial: <strong>sushi e sashimi frescos, ramen artesanal, takoyaki, tempura crocante</strong> e doces típicos japoneses (wagashi e matcha).</p>
                             <ul class="pillar-list">
-                                <li>Sushi & Sashimi de alta qualidade</li>
-                                <li>Ramen autêntico e Takoyaki de Osaka</li>
-                                <li>Sobremesas de Matcha e Wagashi</li>
+                                <li data-i18n="pillar3_li1">Sushi & Sashimi de alta qualidade</li>
+                                <li data-i18n="pillar3_li2">Ramen autêntico e Takoyaki de Osaka</li>
+                                <li data-i18n="pillar3_li3">Sobremesas de Matcha e Wagashi</li>
                             </ul>
                         </div>
                     </div>
@@ -612,9 +612,9 @@
                             <h3><i class="fa-solid fa-leaf text-sakura"></i> <span data-i18n="pillar4_title">Natureza & Monte Fuji</span></h3>
                             <p data-i18n="pillar4_desc">Maravilhe-se com a <strong>florada das cerejeiras (Sakura)</strong>, jardins zen tradicionais perfeitamente esculpidos, florestas de bambu e a majestade do <strong>Monte Fuji</strong>.</p>
                             <ul class="pillar-list">
-                                <li>Florada exuberante de Cerejeiras</li>
-                                <li>Jardins botânicos e lagos do Fuji</li>
-                                <li>Floresta de Bambu de Arashiyama</li>
+                                <li data-i18n="pillar4_li1">Florada exuberante de Cerejeiras</li>
+                                <li data-i18n="pillar4_li2">Jardins botânicos e lagos do Fuji</li>
+                                <li data-i18n="pillar4_li3">Floresta de Bambu de Arashiyama</li>
                             </ul>
                         </div>
                     </div>
@@ -628,9 +628,9 @@
                             <h3><i class="fa-solid fa-gamepad text-sakura"></i> <span data-i18n="pillar5_title">Cultura Pop & Games</span></h3>
                             <p data-i18n="pillar5_desc">Mergulhe no universo dos <strong>animes, mangás, videogames clássicos e lojas de tecnologia</strong> nos famosos distritos de Akihabara, Shibuya e Shinjuku.</p>
                             <ul class="pillar-list">
-                                <li>Akihabara: O santuário dos animes e games</li>
-                                <li>Mega lojas de colecionáveis e gadgets</li>
-                                <li>Cafés temáticos e fliperamas retrô</li>
+                                <li data-i18n="pillar5_li1">Akihabara: O santuário dos animes e games</li>
+                                <li data-i18n="pillar5_li2">Mega lojas de colecionáveis e gadgets</li>
+                                <li data-i18n="pillar5_li3">Cafés temáticos e fliperamas retrô</li>
                             </ul>
                         </div>
                     </div>
@@ -644,9 +644,9 @@
                             <h3><i class="fa-solid fa-train-fast text-sakura"></i> <span data-i18n="pillar6_title">Viagem de Shinkansen</span></h3>
                             <p data-i18n="pillar6_desc">Experimente a lendária precisão e o conforto do <strong>trem-bala japonês</strong>, viajando a mais de 300 km/h com vistas panorâmicas entre as capitais do país.</p>
                             <ul class="pillar-list">
-                                <li>Passeio de alta velocidade entre cidades</li>
-                                <li>Conforto de primeira classe incluso</li>
-                                <li>Pontualidade e tecnologia de ponta</li>
+                                <li data-i18n="pillar6_li1">Passeio de alta velocidade entre cidades</li>
+                                <li data-i18n="pillar6_li2">Conforto de primeira classe incluso</li>
+                                <li data-i18n="pillar6_li3">Pontualidade e tecnologia de ponta</li>
                             </ul>
                         </div>
                     </div>
@@ -680,22 +680,20 @@
                     <div class="attraction-card" data-city="tokyo">
                         <div class="attraction-img-container">
                             <img src="assets/tokyo_shibuya.jpg" alt="Tóquio - Shibuya e Akihabara">
-                            <div class="city-tag">Tóquio • 4 Noites</div>
+                            <div class="city-tag" data-i18n="card_tokyo_tag">Tóquio • 4 Noites</div>
                         </div>
                         <div class="attraction-body">
-                            <h3>Tóquio (Tokyo)</h3>
-                            <p class="attraction-desc">
-                                Explore o famoso <strong>Cruzamento de Shibuya</strong>, a imponente <strong>Tokyo Skytree</strong>, o tradicional <strong>Templo Senso-ji</strong> em Asakusa, e <strong>Akihabara</strong> — o polo mundial de anime, mangá e games. A cidade também oferece as experiências de <strong>Tokyo DisneySea</strong>.
-                            </p>
+                            <h3 data-i18n="card_tokyo_title">Tóquio (Tokyo)</h3>
+                            <p class="attraction-desc" data-i18n="card_tokyo_desc">Explore o famoso <strong>Cruzamento de Shibuya</strong>, a imponente <strong>Tokyo Skytree</strong>, o tradicional <strong>Templo Senso-ji</strong> em Asakusa, e <strong>Akihabara</strong> — o polo mundial de anime, mangá e games. A cidade também oferece as experiências de <strong>Tokyo DisneySea</strong>.</p>
                             <div class="attraction-tags-list">
-                                <span><i class="fa-solid fa-check"></i> Cruzamento de Shibuya</span>
-                                <span><i class="fa-solid fa-check"></i> Tokyo Skytree</span>
-                                <span><i class="fa-solid fa-check"></i> Templo Senso-ji</span>
-                                <span><i class="fa-solid fa-check"></i> Akihabara Geek Hub</span>
-                                <span><i class="fa-solid fa-check"></i> Tokyo DisneySea</span>
+                                <span data-i18n="tag_shibuya"><i class="fa-solid fa-check"></i> Cruzamento de Shibuya</span>
+                                <span data-i18n="tag_skytree"><i class="fa-solid fa-check"></i> Tokyo Skytree</span>
+                                <span data-i18n="tag_sensoji"><i class="fa-solid fa-check"></i> Templo Senso-ji</span>
+                                <span data-i18n="tag_akiba_hub"><i class="fa-solid fa-check"></i> Akihabara Geek Hub</span>
+                                <span data-i18n="tag_disneysea"><i class="fa-solid fa-check"></i> Tokyo DisneySea</span>
                             </div>
                             <button class="btn btn-sm btn-outline-sakura w-100 btn-view-city" data-city="tokyo">
-                                <i class="fa-solid fa-eye"></i> <span data-i18n="btn_view_details">Ver Detalhes de Tóquio</span>
+                                <i class="fa-solid fa-eye"></i> <span data-i18n="btn_view_tokyo">Ver Detalhes de Tóquio</span>
                             </button>
                         </div>
                     </div>
@@ -704,21 +702,19 @@
                     <div class="attraction-card" data-city="kyoto">
                         <div class="attraction-img-container">
                             <img src="assets/kyoto_fushimi.jpg" alt="Quioto - Fushimi Inari e Kinkaku-ji">
-                            <div class="city-tag">Quioto • 2 Noites</div>
+                            <div class="city-tag" data-i18n="card_kyoto_tag">Quioto • 2 Noites</div>
                         </div>
                         <div class="attraction-body">
-                            <h3>Quioto (Kyoto)</h3>
-                            <p class="attraction-desc">
-                                Visite o sagrado <strong>Santuário Fushimi Inari Taisha</strong>, mundialmente famoso por seus milhares de portais torii vermelhos; o esplêndido <strong>Kinkaku-ji (Pavilhão Dourado)</strong>; e a magnífica floresta de bambu de <strong>Arashiyama</strong>.
-                            </p>
+                            <h3 data-i18n="card_kyoto_title">Quioto (Kyoto)</h3>
+                            <p class="attraction-desc" data-i18n="card_kyoto_desc">Visite o sagrado <strong>Santuário Fushimi Inari Taisha</strong>, mundialmente famoso por seus milhares de portais torii vermelhos; o esplêndido <strong>Kinkaku-ji (Pavilhão Dourado)</strong>; e a magnífica floresta de bambu de <strong>Arashiyama</strong>.</p>
                             <div class="attraction-tags-list">
-                                <span><i class="fa-solid fa-check"></i> Santuário Fushimi Inari</span>
-                                <span><i class="fa-solid fa-check"></i> Kinkaku-ji Dourado</span>
-                                <span><i class="fa-solid fa-check"></i> Floresta de Bambu Arashiyama</span>
-                                <span><i class="fa-solid fa-check"></i> Bairro das Gueixas (Gion)</span>
+                                <span data-i18n="tag_fushimi"><i class="fa-solid fa-check"></i> Santuário Fushimi Inari</span>
+                                <span data-i18n="tag_kinkakuji"><i class="fa-solid fa-check"></i> Kinkaku-ji Dourado</span>
+                                <span data-i18n="tag_arashiyama"><i class="fa-solid fa-check"></i> Floresta de Bambu Arashiyama</span>
+                                <span data-i18n="tag_gion"><i class="fa-solid fa-check"></i> Bairro das Gueixas (Gion)</span>
                             </div>
                             <button class="btn btn-sm btn-outline-sakura w-100 btn-view-city" data-city="kyoto">
-                                <i class="fa-solid fa-eye"></i> <span data-i18n="btn_view_details">Ver Detalhes de Quioto</span>
+                                <i class="fa-solid fa-eye"></i> <span data-i18n="btn_view_kyoto">Ver Detalhes de Quioto</span>
                             </button>
                         </div>
                     </div>
@@ -727,21 +723,19 @@
                     <div class="attraction-card" data-city="fuji">
                         <div class="attraction-img-container">
                             <img src="assets/dest_fuji.jpg" alt="Monte Fuji e Lagos">
-                            <div class="city-tag">Monte Fuji • Passeio Especial</div>
+                            <div class="city-tag" data-i18n="card_fuji_tag">Monte Fuji • Passeio Especial</div>
                         </div>
                         <div class="attraction-body">
-                            <h3>Monte Fuji (Fujisan)</h3>
-                            <p class="attraction-desc">
-                                Admire um dos maiores símbolos sagrados do Japão, cercado por paisagens montanhosas de tirar o fôlego, lagos cristalinos e mirantes perfeitos para fotos com a florada das cerejeiras na primavera.
-                            </p>
+                            <h3 data-i18n="card_fuji_title">Monte Fuji (Fujisan)</h3>
+                            <p class="attraction-desc" data-i18n="card_fuji_desc">Admire um dos maiores símbolos sagrados do Japão, cercado por paisagens montanhosas de tirar o fôlego, lagos cristalinos e mirantes perfeitos para fotos com a florada das cerejeiras na primavera.</p>
                             <div class="attraction-tags-list">
-                                <span><i class="fa-solid fa-check"></i> Lago Kawaguchiko</span>
-                                <span><i class="fa-solid fa-check"></i> Pagode Chureito & Mirante</span>
-                                <span><i class="fa-solid fa-check"></i> Quinta Estação do Monte Fuji</span>
-                                <span><i class="fa-solid fa-check"></i> Vila Tradicional Oshino Hakkai</span>
+                                <span data-i18n="tag_kawaguchiko"><i class="fa-solid fa-check"></i> Lago Kawaguchiko</span>
+                                <span data-i18n="tag_chureito"><i class="fa-solid fa-check"></i> Pagode Chureito & Mirante</span>
+                                <span data-i18n="tag_fuji5th"><i class="fa-solid fa-check"></i> Quinta Estação do Monte Fuji</span>
+                                <span data-i18n="tag_oshino"><i class="fa-solid fa-check"></i> Vila Tradicional Oshino Hakkai</span>
                             </div>
                             <button class="btn btn-sm btn-outline-sakura w-100 btn-view-city" data-city="fuji">
-                                <i class="fa-solid fa-eye"></i> <span data-i18n="btn_view_details">Ver Detalhes do Fuji</span>
+                                <i class="fa-solid fa-eye"></i> <span data-i18n="btn_view_fuji">Ver Detalhes do Fuji</span>
                             </button>
                         </div>
                     </div>
@@ -750,21 +744,19 @@
                     <div class="attraction-card" data-city="osaka">
                         <div class="attraction-img-container">
                             <img src="assets/osaka_dotonbori.jpg" alt="Osaka - Dotonbori e Castelo">
-                            <div class="city-tag">Osaka • 3 Noites</div>
+                            <div class="city-tag" data-i18n="card_osaka_tag">Osaka • 3 Noites</div>
                         </div>
                         <div class="attraction-body">
-                            <h3>Osaka</h3>
-                            <p class="attraction-desc">
-                                Conheça a empolgante <strong>Universal Studios Japan</strong>, passeie pelo pulsante bairro gastronômico de <strong>Dotonbori</strong> — famoso por seus letreiros luminosos e comidas de rua — e encante-se com o histórico <strong>Castelo de Osaka</strong>.
-                            </p>
+                            <h3 data-i18n="card_osaka_title">Osaka</h3>
+                            <p class="attraction-desc" data-i18n="card_osaka_desc">Conheça a empolgante <strong>Universal Studios Japan</strong>, passeie pelo pulsante bairro gastronômico de <strong>Dotonbori</strong> — famoso por seus letreiros luminosos e comidas de rua — e encante-se com o histórico <strong>Castelo de Osaka</strong>.</p>
                             <div class="attraction-tags-list">
-                                <span><i class="fa-solid fa-check"></i> Universal Studios Japan</span>
-                                <span><i class="fa-solid fa-check"></i> Dotonbori Street Food</span>
-                                <span><i class="fa-solid fa-check"></i> Castelo Histórico de Osaka</span>
-                                <span><i class="fa-solid fa-check"></i> Bairro Shinsekai</span>
+                                <span data-i18n="tag_usj"><i class="fa-solid fa-check"></i> Universal Studios Japan</span>
+                                <span data-i18n="tag_dotonbori"><i class="fa-solid fa-check"></i> Dotonbori Street Food</span>
+                                <span data-i18n="tag_osakacastle"><i class="fa-solid fa-check"></i> Castelo Histórico de Osaka</span>
+                                <span data-i18n="tag_shinsekai"><i class="fa-solid fa-check"></i> Bairro Shinsekai</span>
                             </div>
                             <button class="btn btn-sm btn-outline-sakura w-100 btn-view-city" data-city="osaka">
-                                <i class="fa-solid fa-eye"></i> <span data-i18n="btn_view_details">Ver Detalhes de Osaka</span>
+                                <i class="fa-solid fa-eye"></i> <span data-i18n="btn_view_osaka">Ver Detalhes de Osaka</span>
                             </button>
                         </div>
                     </div>
@@ -773,21 +765,19 @@
                     <div class="attraction-card" data-city="nara">
                         <div class="attraction-img-container">
                             <img src="assets/nara_deer.jpg" alt="Nara - Parque dos Cervos">
-                            <div class="city-tag">Nara • Bate e Volta Exclusivo</div>
+                            <div class="city-tag" data-i18n="card_nara_tag">Nara • Bate e Volta Exclusivo</div>
                         </div>
                         <div class="attraction-body">
-                            <h3>Nara</h3>
-                            <p class="attraction-desc">
-                                Caminhe tranquilamente pelo encantador <strong>Parque de Nara</strong>, mundialmente famoso por seus cervos sika dóceis que circulam livremente entre os visitantes, e visite o majestoso <strong>Templo Todai-ji</strong> e o Grande Buda de bronze.
-                            </p>
+                            <h3 data-i18n="card_nara_title">Nara</h3>
+                            <p class="attraction-desc" data-i18n="card_nara_desc">Caminhe tranquilamente pelo encantador <strong>Parque de Nara</strong>, mundialmente famoso por seus cervos sika dóceis que circulam livremente entre os visitantes, e visite o majestoso <strong>Templo Todai-ji</strong> e o Grande Buda de bronze.</p>
                             <div class="attraction-tags-list">
-                                <span><i class="fa-solid fa-check"></i> Parque dos Cervos Livres</span>
-                                <span><i class="fa-solid fa-check"></i> Templo Todai-ji (Grande Buda)</span>
-                                <span><i class="fa-solid fa-check"></i> Santuário Kasuga Taisha</span>
-                                <span><i class="fa-solid fa-check"></i> Bosques de Cerejeiras</span>
+                                <span data-i18n="tag_deer_park"><i class="fa-solid fa-check"></i> Parque dos Cervos Livres</span>
+                                <span data-i18n="tag_todaiji"><i class="fa-solid fa-check"></i> Templo Todai-ji (Grande Buda)</span>
+                                <span data-i18n="tag_kasuga"><i class="fa-solid fa-check"></i> Santuário Kasuga Taisha</span>
+                                <span data-i18n="tag_cherry_woods"><i class="fa-solid fa-check"></i> Bosques de Cerejeiras</span>
                             </div>
                             <button class="btn btn-sm btn-outline-sakura w-100 btn-view-city" data-city="nara">
-                                <i class="fa-solid fa-eye"></i> <span data-i18n="btn_view_details">Ver Detalhes de Nara</span>
+                                <i class="fa-solid fa-eye"></i> <span data-i18n="btn_view_nara">Ver Detalhes de Nara</span>
                             </button>
                         </div>
                     </div>
@@ -805,7 +795,7 @@
                     <div class="quote-text">
                         <span class="agency-tag">SAKURA TRIP</span>
                         <blockquote data-i18n="rooms_quote">“Na Sakura Trip, sua jornada começa no momento em que você abre a porta.”</blockquote>
-                        <p class="sub"><em>“At Sakura Trip, your journey begins the moment you open the door.”</em></p>
+                        <p class="sub"><em data-i18n="rooms_quote_sub">“At Sakura Trip, your journey begins the moment you open the door.”</em></p>
                     </div>
                     <div class="sakura-deco-right">🌸</div>
                 </div>
@@ -821,7 +811,7 @@
                     <div class="included-hotel-pill">
                         <div class="city-icon"><i class="fa-solid fa-building"></i></div>
                         <div class="hotel-details">
-                            <span class="city">TÓQUIO</span>
+                            <span class="city" data-i18n="hotel_city_tokyo">TÓQUIO</span>
                             <strong>Sakura Tokyo Hotel</strong>
                             <span class="nights" data-i18n="hotel_tokyo_nights"><i class="fa-solid fa-moon"></i> 4 Noites inclusas</span>
                         </div>
@@ -829,7 +819,7 @@
                     <div class="included-hotel-pill">
                         <div class="city-icon"><i class="fa-solid fa-torii-gate"></i></div>
                         <div class="hotel-details">
-                            <span class="city">QUIOTO</span>
+                            <span class="city" data-i18n="hotel_city_kyoto">QUIOTO</span>
                             <strong>Kyoto Garden Hotel</strong>
                             <span class="nights" data-i18n="hotel_kyoto_nights"><i class="fa-solid fa-moon"></i> 2 Noites inclusas</span>
                         </div>
@@ -837,7 +827,7 @@
                     <div class="included-hotel-pill">
                         <div class="city-icon"><i class="fa-solid fa-castle"></i></div>
                         <div class="hotel-details">
-                            <span class="city">OSAKA</span>
+                            <span class="city" data-i18n="hotel_city_osaka">OSAKA</span>
                             <strong>Osaka Central Hotel</strong>
                             <span class="nights" data-i18n="hotel_osaka_nights"><i class="fa-solid fa-moon"></i> 3 Noites inclusas</span>
                         </div>
@@ -851,22 +841,22 @@
                     <div class="room-card" data-room-id="standard" data-price="80">
                         <div class="room-img-wrap">
                             <img src="assets/room_standard.jpg" alt="Standard Room Sakura Trip">
-                            <span class="room-badge base-badge"><i class="fa-solid fa-check"></i> Opção Padrão</span>
+                            <span class="room-badge base-badge" data-i18n="badge_standard_room"><i class="fa-solid fa-check"></i> Opção Padrão</span>
                         </div>
                         <div class="room-card-body">
                             <div class="room-header-flex">
-                                <h3>STANDARD ROOM</h3>
+                                <h3 data-i18n="room_name_standard">STANDARD ROOM</h3>
                                 <div class="room-price">
                                     <span class="from" data-i18n="room_from">A partir de</span>
                                     <strong class="price-val" data-usd="80">US$ 80</strong>
                                     <span class="per" data-i18n="room_per">/noite</span>
                                 </div>
                             </div>
-                            <p class="room-desc">Confortável e moderno, ideal para 1–2 pessoas com todas as comodidades contemporâneas.</p>
+                            <p class="room-desc" data-i18n="room_standard_desc">Confortável e moderno, ideal para 1–2 pessoas com todas as comodidades contemporâneas.</p>
                             <div class="room-specs">
-                                <span><i class="fa-solid fa-user"></i> 1 a 2 pessoas</span>
-                                <span><i class="fa-solid fa-bed"></i> Cama Queen / Casal</span>
-                                <span><i class="fa-solid fa-wifi"></i> Wi-Fi de alta velocidade</span>
+                                <span data-i18n="room_spec_1_2"><i class="fa-solid fa-user"></i> 1 a 2 pessoas</span>
+                                <span data-i18n="room_spec_queen"><i class="fa-solid fa-bed"></i> Cama Queen / Casal</span>
+                                <span data-i18n="room_spec_wifi"><i class="fa-solid fa-wifi"></i> Wi-Fi de alta velocidade</span>
                             </div>
                             <button class="btn btn-select-room btn-outline-sakura w-100" data-room="STANDARD ROOM" data-price="80">
                                 <i class="fa-solid fa-circle-check"></i> <span data-i18n="btn_select_room">Selecionar Quarto</span>
@@ -878,22 +868,22 @@
                     <div class="room-card" data-room-id="twin" data-price="100">
                         <div class="room-img-wrap">
                             <img src="assets/room_standard.jpg" alt="Twin Room Sakura Trip">
-                            <span class="room-badge"><i class="fa-solid fa-user-group"></i> Mais Popular</span>
+                            <span class="room-badge" data-i18n="badge_most_popular"><i class="fa-solid fa-user-group"></i> Mais Popular</span>
                         </div>
                         <div class="room-card-body">
                             <div class="room-header-flex">
-                                <h3>TWIN ROOM</h3>
+                                <h3 data-i18n="room_name_twin">TWIN ROOM</h3>
                                 <div class="room-price">
                                     <span class="from" data-i18n="room_from">A partir de</span>
                                     <strong class="price-val" data-usd="100">US$ 100</strong>
                                     <span class="per" data-i18n="room_per">/noite</span>
                                 </div>
                             </div>
-                            <p class="room-desc">Duas camas de solteiro individuais, perfeito para viagens com amigos ou colegas.</p>
+                            <p class="room-desc" data-i18n="room_twin_desc">Duas camas de solteiro individuais, perfeito para viagens com amigos ou colegas.</p>
                             <div class="room-specs">
-                                <span><i class="fa-solid fa-users"></i> 2 pessoas</span>
-                                <span><i class="fa-solid fa-bed"></i> 2 Camas de Solteiro</span>
-                                <span><i class="fa-solid fa-bath"></i> Banheiro Privativo</span>
+                                <span data-i18n="room_spec_2p"><i class="fa-solid fa-users"></i> 2 pessoas</span>
+                                <span data-i18n="room_spec_2beds"><i class="fa-solid fa-bed"></i> 2 Camas de Solteiro</span>
+                                <span data-i18n="room_spec_private_bath"><i class="fa-solid fa-bath"></i> Banheiro Privativo</span>
                             </div>
                             <button class="btn btn-select-room btn-outline-sakura w-100" data-room="TWIN ROOM" data-price="100">
                                 <i class="fa-solid fa-circle-check"></i> <span data-i18n="btn_select_room">Selecionar Quarto</span>
@@ -905,22 +895,22 @@
                     <div class="room-card featured-room" data-room-id="japanese" data-price="150">
                         <div class="room-img-wrap">
                             <img src="assets/room_tatami.jpg" alt="Japanese-Style Room Tatami">
-                            <span class="room-badge special-badge"><i class="fa-solid fa-star"></i> Experiência Tradicional</span>
+                            <span class="room-badge special-badge" data-i18n="badge_trad_exp"><i class="fa-solid fa-star"></i> Experiência Tradicional</span>
                         </div>
                         <div class="room-card-body">
                             <div class="room-header-flex">
-                                <h3>JAPANESE-STYLE ROOM</h3>
+                                <h3 data-i18n="room_name_japanese">JAPANESE-STYLE ROOM</h3>
                                 <div class="room-price">
                                     <span class="from" data-i18n="room_from">A partir de</span>
                                     <strong class="price-val" data-usd="150">US$ 150</strong>
                                     <span class="per" data-i18n="room_per">/noite</span>
                                 </div>
                             </div>
-                            <p class="room-desc">Uma experiência 100% tradicional com tatamis de palha, futons de seda e decoração autêntica japonesa com vista para jardim zen.</p>
+                            <p class="room-desc" data-i18n="room_japanese_desc">Uma experiência 100% tradicional com tatamis de palha, futons de seda e decoração autêntica japonesa com vista para jardim zen.</p>
                             <div class="room-specs">
-                                <span><i class="fa-solid fa-users"></i> 2 a 3 pessoas</span>
-                                <span><i class="fa-solid fa-rug"></i> Tatamis & Futons Japoneses</span>
-                                <span><i class="fa-solid fa-mug-hot"></i> Jogo de Chá Matcha Incluso</span>
+                                <span data-i18n="room_spec_2_3p"><i class="fa-solid fa-users"></i> 2 a 3 pessoas</span>
+                                <span data-i18n="room_spec_tatami"><i class="fa-solid fa-rug"></i> Tatamis & Futons Japoneses</span>
+                                <span data-i18n="room_spec_matcha"><i class="fa-solid fa-mug-hot"></i> Jogo de Chá Matcha Incluso</span>
                             </div>
                             <button class="btn btn-select-room btn-primary w-100" data-room="JAPANESE-STYLE ROOM" data-price="150">
                                 <i class="fa-solid fa-circle-check"></i> <span data-i18n="btn_select_room">Selecionar Quarto</span>
@@ -932,22 +922,22 @@
                     <div class="room-card" data-room-id="deluxe" data-price="180">
                         <div class="room-img-wrap">
                             <img src="assets/room_tokyo_view.jpg" alt="Deluxe Room Sakura Trip">
-                            <span class="room-badge"><i class="fa-solid fa-gem"></i> Mais Espaço</span>
+                            <span class="room-badge" data-i18n="badge_more_space"><i class="fa-solid fa-gem"></i> Mais Espaço</span>
                         </div>
                         <div class="room-card-body">
                             <div class="room-header-flex">
-                                <h3>DELUXE ROOM</h3>
+                                <h3 data-i18n="room_name_deluxe">DELUXE ROOM</h3>
                                 <div class="room-price">
                                     <span class="from" data-i18n="room_from">A partir de</span>
                                     <strong class="price-val" data-usd="180">US$ 180</strong>
                                     <span class="per" data-i18n="room_per">/noite</span>
                                 </div>
                             </div>
-                            <p class="room-desc">Espaço extra, conforto elevado e decoração sofisticada com área de estar e amenities premium.</p>
+                            <p class="room-desc" data-i18n="room_deluxe_desc">Espaço extra, conforto elevado e decoração sofisticada com área de estar e amenities premium.</p>
                             <div class="room-specs">
                                 <span><i class="fa-solid fa-users"></i> 2 pessoas</span>
-                                <span><i class="fa-solid fa-couch"></i> Lounge & Área de Estar</span>
-                                <span><i class="fa-solid fa-shower"></i> Ducha com Hidromassagem</span>
+                                <span data-i18n="room_spec_lounge"><i class="fa-solid fa-couch"></i> Lounge & Área de Estar</span>
+                                <span data-i18n="room_spec_hydro"><i class="fa-solid fa-shower"></i> Ducha com Hidromassagem</span>
                             </div>
                             <button class="btn btn-select-room btn-outline-sakura w-100" data-room="DELUXE ROOM" data-price="180">
                                 <i class="fa-solid fa-circle-check"></i> <span data-i18n="btn_select_room">Selecionar Quarto</span>
@@ -959,22 +949,22 @@
                     <div class="room-card" data-room-id="tokyo-view" data-price="220">
                         <div class="room-img-wrap">
                             <img src="assets/room_tokyo_view.jpg" alt="Tokyo View Room Skyline">
-                            <span class="room-badge view-badge"><i class="fa-solid fa-mountain-sun"></i> Vista Panorâmica</span>
+                            <span class="room-badge view-badge" data-i18n="badge_skyline_view"><i class="fa-solid fa-mountain-sun"></i> Vista Panorâmica</span>
                         </div>
                         <div class="room-card-body">
                             <div class="room-header-flex">
-                                <h3>TOKYO VIEW ROOM</h3>
+                                <h3 data-i18n="room_name_tokyo_view">TOKYO VIEW ROOM</h3>
                                 <div class="room-price">
                                     <span class="from" data-i18n="room_from">A partir de</span>
                                     <strong class="price-val" data-usd="220">US$ 220</strong>
                                     <span class="per" data-i18n="room_per">/noite</span>
                                 </div>
                             </div>
-                            <p class="room-desc">Apresenta uma vista panorâmica deslumbrante da skyline iluminada de Tóquio e da Tokyo Tower.</p>
+                            <p class="room-desc" data-i18n="room_tokyo_view_desc">Apresenta uma vista panorâmica deslumbrante da skyline iluminada de Tóquio e da Tokyo Tower.</p>
                             <div class="room-specs">
                                 <span><i class="fa-solid fa-users"></i> 2 pessoas</span>
-                                <span><i class="fa-solid fa-binoculars"></i> Janelas Piso ao Teto</span>
-                                <span><i class="fa-solid fa-wine-glass"></i> Frigobar Cortesia</span>
+                                <span data-i18n="room_spec_floor_windows"><i class="fa-solid fa-binoculars"></i> Janelas Piso ao Teto</span>
+                                <span data-i18n="room_spec_minibar"><i class="fa-solid fa-wine-glass"></i> Frigobar Cortesia</span>
                             </div>
                             <button class="btn btn-select-room btn-outline-sakura w-100" data-room="TOKYO VIEW ROOM" data-price="220">
                                 <i class="fa-solid fa-circle-check"></i> <span data-i18n="btn_select_room">Selecionar Quarto</span>
@@ -986,22 +976,22 @@
                     <div class="room-card" data-room-id="family" data-price="200">
                         <div class="room-img-wrap">
                             <img src="assets/room_luxury_suite.jpg" alt="Family Room Sakura Trip">
-                            <span class="room-badge family-badge"><i class="fa-solid fa-people-roof"></i> Para Famílias</span>
+                            <span class="room-badge family-badge" data-i18n="badge_for_families"><i class="fa-solid fa-people-roof"></i> Para Famílias</span>
                         </div>
                         <div class="room-card-body">
                             <div class="room-header-flex">
-                                <h3>FAMILY ROOM</h3>
+                                <h3 data-i18n="room_name_family">FAMILY ROOM</h3>
                                 <div class="room-price">
                                     <span class="from" data-i18n="room_from">A partir de</span>
                                     <strong class="price-val" data-usd="200">US$ 200</strong>
                                     <span class="per" data-i18n="room_per">/noite</span>
                                 </div>
                             </div>
-                            <p class="room-desc">Espaçoso e acolhedor, planejado especialmente para famílias e pequenos grupos com total comodidade.</p>
+                            <p class="room-desc" data-i18n="room_family_desc">Espaçoso e acolhedor, planejado especialmente para famílias e pequenos grupos com total comodidade.</p>
                             <div class="room-specs">
-                                <span><i class="fa-solid fa-users"></i> 3 a 4 pessoas</span>
-                                <span><i class="fa-solid fa-bed"></i> 1 Cama King + 2 Camas Twin</span>
-                                <span><i class="fa-solid fa-tv"></i> Smart TV 65'' & Games</span>
+                                <span data-i18n="room_spec_3_4p"><i class="fa-solid fa-users"></i> 3 a 4 pessoas</span>
+                                <span data-i18n="room_spec_king_twin"><i class="fa-solid fa-bed"></i> 1 Cama King + 2 Camas Twin</span>
+                                <span data-i18n="room_spec_tv_games"><i class="fa-solid fa-tv"></i> Smart TV 65'' & Games</span>
                             </div>
                             <button class="btn btn-select-room btn-outline-sakura w-100" data-room="FAMILY ROOM" data-price="200">
                                 <i class="fa-solid fa-circle-check"></i> <span data-i18n="btn_select_room">Selecionar Quarto</span>
@@ -1013,22 +1003,22 @@
                     <div class="room-card vip-room" data-room-id="luxury" data-price="400">
                         <div class="room-img-wrap">
                             <img src="assets/room_luxury_suite.jpg" alt="Luxury Suite Sakura Trip com Onsen Privativo">
-                            <span class="room-badge vip-badge"><i class="fa-solid fa-crown"></i> Máximo Luxo VIP</span>
+                            <span class="room-badge vip-badge" data-i18n="badge_vip_luxury"><i class="fa-solid fa-crown"></i> Máximo Luxo VIP</span>
                         </div>
                         <div class="room-card-body">
                             <div class="room-header-flex">
-                                <h3>LUXURY SUITE</h3>
+                                <h3 data-i18n="room_name_luxury">LUXURY SUITE</h3>
                                 <div class="room-price">
                                     <span class="from" data-i18n="room_from">A partir de</span>
                                     <strong class="price-val" data-usd="400">US$ 400</strong>
                                     <span class="per" data-i18n="room_per">/noite</span>
                                 </div>
                             </div>
-                            <p class="room-desc">Uma experiência premium com amplo espaço privativo, serviços exclusivos de concierge e banheira estilo onsen de madeira aromática hinoki.</p>
+                            <p class="room-desc" data-i18n="room_luxury_desc">Uma experiência premium com amplo espaço privativo, serviços exclusivos de concierge e banheira estilo onsen de madeira aromática hinoki.</p>
                             <div class="room-specs">
-                                <span><i class="fa-solid fa-hot-tub-person"></i> Ofurô/Onsen Privativo</span>
-                                <span><i class="fa-solid fa-bell-concierge"></i> Concierge 24h</span>
-                                <span><i class="fa-solid fa-champagne-glasses"></i> Café da Manhã Gourmet</span>
+                                <span data-i18n="room_spec_ofuro"><i class="fa-solid fa-hot-tub-person"></i> Ofurô/Onsen Privativo</span>
+                                <span data-i18n="room_spec_concierge"><i class="fa-solid fa-bell-concierge"></i> Concierge 24h</span>
+                                <span data-i18n="room_spec_breakfast"><i class="fa-solid fa-champagne-glasses"></i> Café da Manhã Gourmet</span>
                             </div>
                             <button class="btn btn-select-room btn-vip w-100" data-room="LUXURY SUITE" data-price="400">
                                 <i class="fa-solid fa-crown"></i> <span data-i18n="btn_select_room">Selecionar Suite Luxo</span>
@@ -1055,112 +1045,112 @@
 
                 <div class="itinerary-timeline">
                     <div class="timeline-day-card">
-                        <div class="day-badge">Dia 01</div>
+                        <div class="day-badge" data-i18n="day01_badge">Dia 01</div>
                         <div class="day-content">
                             <div class="day-header">
-                                <h4>Embarque em São Paulo (GRU) ➔ Chegada em Tóquio (HND)</h4>
-                                <span class="loc-tag"><i class="fa-solid fa-plane"></i> Voo Internacional</span>
+                                <h4 data-i18n="day01_title">Embarque em São Paulo (GRU) ➔ Chegada em Tóquio (HND)</h4>
+                                <span class="loc-tag" data-i18n="loc_intl_flight"><i class="fa-solid fa-plane"></i> Voo Internacional</span>
                             </div>
-                            <p>Encontro da equipe Sakura Trip no Aeroporto Internacional de Guarulhos (GRU) com assistência no check-in e despacho de bagagens. Voo rumo ao Japão com todo o suporte e refeições a bordo.</p>
+                            <p data-i18n="day01_desc">Encontro da equipe Sakura Trip no Aeroporto Internacional de Guarulhos (GRU) com assistência no check-in e despacho de bagagens. Voo rumo ao Japão com todo o suporte e refeições a bordo.</p>
                         </div>
                     </div>
 
                     <div class="timeline-day-card">
-                        <div class="day-badge">Dia 02</div>
+                        <div class="day-badge" data-i18n="day02_badge">Dia 02</div>
                         <div class="day-content">
                             <div class="day-header">
-                                <h4>Boas-Vindas a Tóquio & Check-in no Sakura Tokyo Hotel</h4>
-                                <span class="loc-tag"><i class="fa-solid fa-hotel"></i> Tóquio</span>
+                                <h4 data-i18n="day02_title">Boas-Vindas a Tóquio & Check-in no Sakura Tokyo Hotel</h4>
+                                <span class="loc-tag" data-i18n="loc_tokyo_hotel"><i class="fa-solid fa-hotel"></i> Tóquio</span>
                             </div>
-                            <p>Desembarque no Aeroporto de Haneda (HND), recepção personalizada e transfer para o <strong>Sakura Tokyo Hotel</strong>. Noite livre para descansar e primeira caminhada pelos arredores iluminados.</p>
+                            <p data-i18n="day02_desc">Desembarque no Aeroporto de Haneda (HND), recepção personalizada e transfer para o <strong>Sakura Tokyo Hotel</strong>. Noite livre para descansar e primeira caminhada pelos arredores iluminados.</p>
                         </div>
                     </div>
 
                     <div class="timeline-day-card">
-                        <div class="day-badge">Dia 03</div>
+                        <div class="day-badge" data-i18n="day03_badge">Dia 03</div>
                         <div class="day-content">
                             <div class="day-header">
-                                <h4>Tóquio Tradicional & Moderno: Asakusa, Senso-ji e Tokyo Skytree</h4>
-                                <span class="loc-tag"><i class="fa-solid fa-torii-gate"></i> Tóquio</span>
+                                <h4 data-i18n="day03_title">Tóquio Tradicional & Moderno: Asakusa, Senso-ji e Tokyo Skytree</h4>
+                                <span class="loc-tag" data-i18n="loc_tokyo"><i class="fa-solid fa-torii-gate"></i> Tóquio</span>
                             </div>
-                            <p>Visita guiada ao milenar Templo Senso-ji e compras de doces típicos na rua Nakamise. À tarde, subida na monumental <strong>Tokyo Skytree</strong> com vista panorâmica de 360° da metrópole.</p>
+                            <p data-i18n="day03_desc">Visita guiada ao milenar Templo Senso-ji e compras de doces típicos na rua Nakamise. À tarde, subida na monumental <strong>Tokyo Skytree</strong> com vista panorâmica de 360° da metrópole.</p>
                         </div>
                     </div>
 
                     <div class="timeline-day-card">
-                        <div class="day-badge">Dia 04</div>
+                        <div class="day-badge" data-i18n="day04_badge">Dia 04</div>
                         <div class="day-content">
                             <div class="day-header">
-                                <h4>Shibuya Crossing, Harajuku & Epicentro Geek de Akihabara</h4>
-                                <span class="loc-tag"><i class="fa-solid fa-gamepad"></i> Tóquio</span>
+                                <h4 data-i18n="day04_title">Shibuya Crossing, Harajuku & Epicentro Geek de Akihabara</h4>
+                                <span class="loc-tag" data-i18n="loc_tokyo_geek"><i class="fa-solid fa-gamepad"></i> Tóquio</span>
                             </div>
-                            <p>Atravesse o cruzamento mais movimentado do planeta em Shibuya, visite a estátua de Hachiko e passe a tarde explorando os maiores edifícios de animes, mangás e videogames em Akihabara.</p>
+                            <p data-i18n="day04_desc">Atravesse o cruzamento mais movimentado do planeta em Shibuya, visite a estátua de Hachiko e passe a tarde explorando os maiores edifícios de animes, mangás e videogames em Akihabara.</p>
                         </div>
                     </div>
 
                     <div class="timeline-day-card">
-                        <div class="day-badge">Dia 05</div>
+                        <div class="day-badge" data-i18n="day05_badge">Dia 05</div>
                         <div class="day-content">
                             <div class="day-header">
-                                <h4>Magia em Tokyo DisneySea ou Tokyo Disneyland</h4>
-                                <span class="loc-tag"><i class="fa-solid fa-wand-magic-sparkles"></i> Tóquio</span>
+                                <h4 data-i18n="day05_title">Magia em Tokyo DisneySea ou Tokyo Disneyland</h4>
+                                <span class="loc-tag" data-i18n="loc_tokyo_disney"><i class="fa-solid fa-wand-magic-sparkles"></i> Tóquio</span>
                             </div>
-                            <p>Dia inteiro dedicado a um dos parques mais aclamados do planeta. Atrações aquáticas, áreas de fantasia e encerramento com o show de fogos sobre o castelo cercado por cerejeiras.</p>
+                            <p data-i18n="day05_desc">Dia inteiro dedicado a um dos parques mais aclamados do planeta. Atrações aquáticas, áreas de fantasia e encerramento com o show de fogos sobre o castelo cercado por cerejeiras.</p>
                         </div>
                     </div>
 
                     <div class="timeline-day-card">
-                        <div class="day-badge">Dia 06</div>
+                        <div class="day-badge" data-i18n="day06_badge">Dia 06</div>
                         <div class="day-content">
                             <div class="day-header">
-                                <h4>Excursão ao Monte Fuji ➔ Shinkansen para Quioto</h4>
-                                <span class="loc-tag"><i class="fa-solid fa-train-fast"></i> Fuji & Quioto</span>
+                                <h4 data-i18n="day06_title">Excursão ao Monte Fuji ➔ Shinkansen para Quioto</h4>
+                                <span class="loc-tag" data-i18n="loc_fuji_kyoto"><i class="fa-solid fa-train-fast"></i> Fuji & Quioto</span>
                             </div>
-                            <p>Passeio aos pés do imponente Monte Fuji e lagos cênicos de Kawaguchiko. À tarde, embarque no <strong>Trem-Bala Shinkansen</strong> com destino a Quioto. Check-in no Kyoto Garden Hotel.</p>
+                            <p data-i18n="day06_desc">Passeio aos pés do imponente Monte Fuji e lagos cênicos de Kawaguchiko. À tarde, embarque no <strong>Trem-Bala Shinkansen</strong> com destino a Quioto. Check-in no Kyoto Garden Hotel.</p>
                         </div>
                     </div>
 
                     <div class="timeline-day-card">
-                        <div class="day-badge">Dia 07</div>
+                        <div class="day-badge" data-i18n="day07_badge">Dia 07</div>
                         <div class="day-content">
                             <div class="day-header">
-                                <h4>Fushimi Inari Taisha, Kinkaku-ji (Pavilhão Dourado) & Arashiyama</h4>
-                                <span class="loc-tag"><i class="fa-solid fa-tree"></i> Quioto</span>
+                                <h4 data-i18n="day07_title">Fushimi Inari Taisha, Kinkaku-ji (Pavilhão Dourado) & Arashiyama</h4>
+                                <span class="loc-tag" data-i18n="loc_kyoto_nature"><i class="fa-solid fa-tree"></i> Quioto</span>
                             </div>
-                            <p>Caminhada pelos milhares de portais torii vermelhos de Fushimi Inari, visita ao Pavilhão Dourado reluzente sobre o lago e passeio relaxante pelos altos bambuzais de Arashiyama.</p>
+                            <p data-i18n="day07_desc">Caminhada pelos milhares de portais torii vermelhos de Fushimi Inari, visita ao Pavilhão Dourado reluzente sobre o lago e passeio relaxante pelos altos bambuzais de Arashiyama.</p>
                         </div>
                     </div>
 
                     <div class="timeline-day-card">
-                        <div class="day-badge">Dia 08</div>
+                        <div class="day-badge" data-i18n="day08_badge">Dia 08</div>
                         <div class="day-content">
                             <div class="day-header">
-                                <h4>Nara Park e os Cervos Sagrados ➔ Chegada em Osaka</h4>
-                                <span class="loc-tag"><i class="fa-solid fa-paw"></i> Nara & Osaka</span>
+                                <h4 data-i18n="day08_title">Nara Park e os Cervos Sagrados ➔ Chegada em Osaka</h4>
+                                <span class="loc-tag" data-i18n="loc_nara_osaka"><i class="fa-solid fa-paw"></i> Nara & Osaka</span>
                             </div>
-                            <p>Manhã em Nara com os dóceis cervos que se curvam aos turistas e visita ao Grande Buda de Todai-ji. Transfer para Osaka e check-in no <strong>Osaka Central Hotel</strong>. Noite no vibrante Dotonbori.</p>
+                            <p data-i18n="day08_desc">Manhã em Nara com os dóceis cervos que se curvam aos turistas e visita ao Grande Buda de Todai-ji. Transfer para Osaka e check-in no <strong>Osaka Central Hotel</strong>. Noite no vibrante Dotonbori.</p>
                         </div>
                     </div>
 
                     <div class="timeline-day-card">
-                        <div class="day-badge">Dia 09</div>
+                        <div class="day-badge" data-i18n="day09_badge">Dia 09</div>
                         <div class="day-content">
                             <div class="day-header">
-                                <h4>Universal Studios Japan (USJ) & Castelo de Osaka</h4>
-                                <span class="loc-tag"><i class="fa-solid fa-castle"></i> Osaka</span>
+                                <h4 data-i18n="day09_title">Universal Studios Japan (USJ) & Castelo de Osaka</h4>
+                                <span class="loc-tag" data-i18n="loc_osaka_castle"><i class="fa-solid fa-castle"></i> Osaka</span>
                             </div>
-                            <p>Dia inesquecível na Universal Studios Japan (Super Nintendo World) e visita ao histórico Castelo de Osaka cercado pelo fosso e cerejeiras. Jantar de despedida com takoyaki e sushi.</p>
+                            <p data-i18n="day09_desc">Dia inesquecível na Universal Studios Japan (Super Nintendo World) e visita ao histórico Castelo de Osaka cercado pelo fosso e cerejeiras. Jantar de despedida com takoyaki e sushi.</p>
                         </div>
                     </div>
 
                     <div class="timeline-day-card">
-                        <div class="day-badge">Dia 10</div>
+                        <div class="day-badge" data-i18n="day10_badge">Dia 10</div>
                         <div class="day-content">
                             <div class="day-header">
-                                <h4>Compras Finais, Shinkansen para Haneda & Retorno ao Brasil</h4>
-                                <span class="loc-tag"><i class="fa-solid fa-plane-departure"></i> Tóquio ➔ GRU</span>
+                                <h4 data-i18n="day10_title">Compras Finais, Shinkansen para Haneda & Retorno ao Brasil</h4>
+                                <span class="loc-tag" data-i18n="loc_tokyo_gru"><i class="fa-solid fa-plane-departure"></i> Tóquio ➔ GRU</span>
                             </div>
-                            <p>Manhã livre para últimas compras. Viagem de Shinkansen até o Aeroporto de Haneda (HND) e embarque de volta ao Brasil, com chegada repleta de memórias eternas!</p>
+                            <p data-i18n="day10_desc">Manhã livre para últimas compras. Viagem de Shinkansen até o Aeroporto de Haneda (HND) e embarque de volta ao Brasil, com chegada repleta de memórias eternas!</p>
                         </div>
                     </div>
                 </div>
@@ -1175,9 +1165,7 @@
                     <div class="tips-intro-col">
                         <span class="badge-pill" data-i18n="tips_badge">🎒 Preparativos da Viagem</span>
                         <h2 class="title" data-i18n="tips_title">SAKURA TRIP TIPS: O Que Levar na Mala</h2>
-                        <p class="desc">
-                            Para garantir que sua experiência no Japão seja 100% confortável, montamos o checklist oficial da Sakura Trip com todos os itens recomendados pelos nossos especialistas.
-                        </p>
+                        <p class="desc" data-i18n="tips_intro_desc">Para garantir que sua experiência no Japão seja 100% confortável, montamos o checklist oficial da Sakura Trip com todos os itens recomendados pelos nossos especialistas.</p>
 
                         <!-- Interactive Progress Card -->
                         <div class="packing-progress-card">
@@ -1198,8 +1186,8 @@
                         <div class="weather-alert-box">
                             <div class="icon"><i class="fa-solid fa-cloud-sun"></i></div>
                             <div class="text">
-                                <strong>Clima em Abril no Japão:</strong>
-                                <span>Primavera agradável com médias de 14°C a 20°C. Dias ensolarados e noites frescas. Recomenda-se casaco leve e camadas.</span>
+                                <strong data-i18n="weather_title">Clima em Abril no Japão:</strong>
+                                <span data-i18n="weather_desc">Primavera agradável com médias de 14°C a 20°C. Dias ensolarados e noites frescas. Recomenda-se casaco leve e camadas.</span>
                             </div>
                         </div>
                     </div>
@@ -1213,8 +1201,8 @@
                                 <div class="item-info">
                                     <span class="emoji">👟</span>
                                     <div class="text">
-                                        <strong>Calçados confortáveis</strong>
-                                        <small>Caminhadas em templos, parques e estações.</small>
+                                        <strong data-i18n="tip_shoes_title">Calçados confortáveis</strong>
+                                        <small data-i18n="tip_shoes_desc">Caminhadas em templos, parques e estações.</small>
                                     </div>
                                 </div>
                             </label>
@@ -1225,8 +1213,8 @@
                                 <div class="item-info">
                                     <span class="emoji">🥋</span>
                                     <div class="text">
-                                        <strong>Roupas adequadas ao clima</strong>
-                                        <small>Casacos leves e roupas em camadas para a primavera.</small>
+                                        <strong data-i18n="tip_clothes_title">Roupas adequadas ao clima</strong>
+                                        <small data-i18n="tip_clothes_desc">Casacos leves e roupas em camadas para a primavera.</small>
                                     </div>
                                 </div>
                             </label>
@@ -1237,8 +1225,8 @@
                                 <div class="item-info">
                                     <span class="emoji">🔌</span>
                                     <div class="text">
-                                        <strong>Adaptador e carregador</strong>
-                                        <small>Padrão japonês de dois pinos chatos (Tipo A, 100V).</small>
+                                        <strong data-i18n="tip_adapter_title">Adaptador e carregador</strong>
+                                        <small data-i18n="tip_adapter_desc">Padrão japonês de dois pinos chatos (Tipo A, 100V).</small>
                                     </div>
                                 </div>
                             </label>
@@ -1249,8 +1237,8 @@
                                 <div class="item-info">
                                     <span class="emoji">💴 💳</span>
                                     <div class="text">
-                                        <strong>Ienes em espécie e cartões</strong>
-                                        <small>Dinheiro em ienes (¥) para templos e comidas de rua.</small>
+                                        <strong data-i18n="tip_yen_title">Ienes em espécie e cartões</strong>
+                                        <small data-i18n="tip_yen_desc">Dinheiro em ienes (¥) para templos e comidas de rua.</small>
                                     </div>
                                 </div>
                             </label>
@@ -1261,8 +1249,8 @@
                                 <div class="item-info">
                                     <span class="emoji">📱</span>
                                     <div class="text">
-                                        <strong>Celular e Power Bank</strong>
-                                        <small>Bateria portátil para fotos e navegação o dia todo.</small>
+                                        <strong data-i18n="tip_phone_title">Celular e Power Bank</strong>
+                                        <small data-i18n="tip_phone_desc">Bateria portátil para fotos e navegação o dia todo.</small>
                                     </div>
                                 </div>
                             </label>
@@ -1273,8 +1261,8 @@
                                 <div class="item-info">
                                     <span class="emoji">🎒</span>
                                     <div class="text">
-                                        <strong>Mochila pequena diária</strong>
-                                        <small>Para carregar água, agasalho e itens pessoais.</small>
+                                        <strong data-i18n="tip_backpack_title">Mochila pequena diária</strong>
+                                        <small data-i18n="tip_backpack_desc">Para carregar água, agasalho e itens pessoais.</small>
                                     </div>
                                 </div>
                             </label>
@@ -1285,8 +1273,8 @@
                                 <div class="item-info">
                                     <span class="emoji">📄</span>
                                     <div class="text">
-                                        <strong>Passaporte e documentos</strong>
-                                        <small>Válidos por pelo menos 6 meses e seguro-viagem.</small>
+                                        <strong data-i18n="tip_passport_title">Passaporte e documentos</strong>
+                                        <small data-i18n="tip_passport_desc">Válidos por pelo menos 6 meses e seguro-viagem.</small>
                                     </div>
                                 </div>
                             </label>
@@ -1297,8 +1285,8 @@
                                 <div class="item-info">
                                     <span class="emoji">☂️</span>
                                     <div class="text">
-                                        <strong>Guarda-chuva compacto</strong>
-                                        <small>Para eventuais chuviscos de primavera japonesa.</small>
+                                        <strong data-i18n="tip_umbrella_title">Guarda-chuva compacto</strong>
+                                        <small data-i18n="tip_umbrella_desc">Para eventuais chuviscos de primavera japonesa.</small>
                                     </div>
                                 </div>
                             </label>
@@ -1309,8 +1297,8 @@
                                 <div class="item-info">
                                     <span class="emoji">🧴</span>
                                     <div class="text">
-                                        <strong>Itens pessoais & medicamentos</strong>
-                                        <small>Remédios de uso contínuo com receita médica.</small>
+                                        <strong data-i18n="tip_meds_title">Itens pessoais & medicamentos</strong>
+                                        <small data-i18n="tip_meds_desc">Remédios de uso contínuo com receita médica.</small>
                                     </div>
                                 </div>
                             </label>
@@ -1321,8 +1309,8 @@
                                 <div class="item-info">
                                     <span class="emoji">🛍️</span>
                                     <div class="text">
-                                        <strong>Espaço para lembrancinhas</strong>
-                                        <small>Deixe espaço reservado na mala para compras!</small>
+                                        <strong data-i18n="tip_souvenirs_title">Espaço para lembrancinhas</strong>
+                                        <small data-i18n="tip_souvenirs_desc">Deixe espaço reservado na mala para compras!</small>
                                     </div>
                                 </div>
                             </label>
@@ -1342,9 +1330,9 @@
                         <h2 data-i18n="cta_title">Garanta sua vaga na viagem dos seus sonhos ao Japão!</h2>
                         <p data-i18n="cta_desc">O prazo limite para confirmação e reserva é <strong>10 de Janeiro de 2027</strong>. As vagas para a florada de cerejeiras são extremamente concorridas.</p>
                         <div class="cta-tags-group">
-                            <span><i class="fa-solid fa-shield-halved"></i> CNPJ Verificado: 33.134.817/0001-01</span>
-                            <span><i class="fa-solid fa-credit-card"></i> Em até 12x Sem Juros</span>
-                            <span><i class="fa-solid fa-headset"></i> Suporte Completo em Português</span>
+                            <span data-i18n="cta_cnpj"><i class="fa-solid fa-shield-halved"></i> CNPJ Verificado: 33.134.817/0001-01</span>
+                            <span data-i18n="cta_installments"><i class="fa-solid fa-credit-card"></i> Em até 12x Sem Juros</span>
+                            <span data-i18n="cta_support"><i class="fa-solid fa-headset"></i> Suporte Completo em Português</span>
                         </div>
                     </div>
                     <div class="cta-action-side">
@@ -1367,43 +1355,41 @@
             <div class="footer-top-row">
                 <div class="footer-brand-col">
                     <img src="assets/logo_white.png" alt="Sakura Trip Logo" class="footer-logo">
-                    <p class="footer-bio">
-                        A <strong>Sakura Trip</strong> é a sua agência de turismo especializada em experiências autênticas e inesquecíveis pelo Japão. Onde a tradição milenar encontra a mais alta tecnologia.
-                    </p>
+                    <p class="footer-bio" data-i18n="footer_bio">A <strong>Sakura Trip</strong> é a sua agência de turismo especializada em experiências autênticas e inesquecíveis pelo Japão. Onde a tradição milenar encontra a mais alta tecnologia.</p>
                     <div class="legal-badge">
                         <i class="fa-solid fa-id-card"></i> <strong>CNPJ: 33.134.817/0001-01</strong>
                     </div>
                     <div class="legal-badge-sub">
-                        <span>Razão Social: Sakura Trip Agência de Viagens e Turismo Ltda.</span>
+                        <span data-i18n="footer_corporate_name">Razão Social: Sakura Trip Agência de Viagens e Turismo Ltda.</span>
                     </div>
                 </div>
 
                 <div class="footer-links-col">
-                    <h4>Navegação Rápida</h4>
+                    <h4 data-i18n="footer_col_nav">Navegação Rápida</h4>
                     <ul>
-                        <li><a href="#pacote-japao"><i class="fa-solid fa-angle-right"></i> Pacote Japão 2027</a></li>
-                        <li><a href="#atracoes"><i class="fa-solid fa-angle-right"></i> Atrações & Cidades</a></li>
-                        <li><a href="#experiencias"><i class="fa-solid fa-angle-right"></i> Experiências Inclusas</a></li>
-                        <li><a href="#hospedagem"><i class="fa-solid fa-angle-right"></i> Hotéis & Quartos</a></li>
-                        <li><a href="#roteiro"><i class="fa-solid fa-angle-right"></i> Roteiro 10 Dias</a></li>
-                        <li><a href="#dicas"><i class="fa-solid fa-angle-right"></i> Dicas de Bagagem</a></li>
+                        <li><a href="#pacote-japao" data-i18n="footer_link_pkg"><i class="fa-solid fa-angle-right"></i> Pacote Japão 2027</a></li>
+                        <li><a href="#atracoes" data-i18n="footer_link_attr"><i class="fa-solid fa-angle-right"></i> Atrações & Cidades</a></li>
+                        <li><a href="#experiencias" data-i18n="footer_link_exp"><i class="fa-solid fa-angle-right"></i> Experiências Inclusas</a></li>
+                        <li><a href="#hospedagem" data-i18n="footer_link_hotels"><i class="fa-solid fa-angle-right"></i> Hotéis & Quartos</a></li>
+                        <li><a href="#roteiro" data-i18n="footer_link_itinerary"><i class="fa-solid fa-angle-right"></i> Roteiro 10 Dias</a></li>
+                        <li><a href="#dicas" data-i18n="footer_link_tips"><i class="fa-solid fa-angle-right"></i> Dicas de Bagagem</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-links-col">
-                    <h4>Informações da Viagem</h4>
+                    <h4 data-i18n="footer_col_info">Informações da Viagem</h4>
                     <ul>
-                        <li><a href="javascript:void(0)" class="btn-open-faq" data-topic="datas"><i class="fa-solid fa-angle-right"></i> Datas: 10 a 20 de Abril de 2027</a></li>
-                        <li><a href="javascript:void(0)" class="btn-open-faq" data-topic="incluso"><i class="fa-solid fa-angle-right"></i> O que está incluso no pacote</a></li>
-                        <li><a href="javascript:void(0)" class="btn-open-faq" data-topic="pagamento"><i class="fa-solid fa-angle-right"></i> Formas de Pagamento & Parcelamento</a></li>
-                        <li><a href="javascript:void(0)" class="btn-open-faq" data-topic="vistos"><i class="fa-solid fa-angle-right"></i> Visto Japonês & Isenção</a></li>
-                        <li><a href="javascript:void(0)" class="btn-open-faq" data-topic="cancelamento"><i class="fa-solid fa-angle-right"></i> Política de Cancelamento</a></li>
-                        <li><a href="javascript:void(0)" class="btn-open-faq" data-topic="seguro"><i class="fa-solid fa-angle-right"></i> Seguro Saúde & Bagagem</a></li>
+                        <li><a href="javascript:void(0)" class="btn-open-faq" data-topic="datas" data-i18n="footer_info_dates"><i class="fa-solid fa-angle-right"></i> Datas: 10 a 20 de Abril de 2027</a></li>
+                        <li><a href="javascript:void(0)" class="btn-open-faq" data-topic="incluso" data-i18n="footer_info_included"><i class="fa-solid fa-angle-right"></i> O que está incluso no pacote</a></li>
+                        <li><a href="javascript:void(0)" class="btn-open-faq" data-topic="pagamento" data-i18n="footer_info_payment"><i class="fa-solid fa-angle-right"></i> Formas de Pagamento & Parcelamento</a></li>
+                        <li><a href="javascript:void(0)" class="btn-open-faq" data-topic="vistos" data-i18n="footer_info_visa"><i class="fa-solid fa-angle-right"></i> Visto Japonês & Isenção</a></li>
+                        <li><a href="javascript:void(0)" class="btn-open-faq" data-topic="cancelamento" data-i18n="footer_info_cancel"><i class="fa-solid fa-angle-right"></i> Política de Cancelamento</a></li>
+                        <li><a href="javascript:void(0)" class="btn-open-faq" data-topic="seguro" data-i18n="footer_info_insurance"><i class="fa-solid fa-angle-right"></i> Seguro Saúde & Bagagem</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-contact-col">
-                    <h4>Atendimento & Suporte</h4>
+                    <h4 data-i18n="footer_col_support">Atendimento & Suporte</h4>
                     <p><i class="fa-solid fa-location-dot"></i> Av. da Liberdade, 1000 - São Paulo, SP</p>
                     <p><i class="fa-solid fa-phone"></i> (11) 3300-7700 | 0800 777 2027</p>
                     <p><i class="fa-brands fa-whatsapp"></i> (11) 98765-4321 (WhatsApp 24h)</p>
@@ -1420,18 +1406,18 @@
 
             <div class="footer-seals-row">
                 <div class="payment-methods">
-                    <span class="seal-label">Formas de Pagamento:</span>
+                    <span class="seal-label" data-i18n="footer_pay_title">Formas de Pagamento:</span>
                     <div class="method-icons">
-                        <span class="pay-badge"><i class="fa-brands fa-pix"></i> Pix Instantâneo</span>
-                        <span class="pay-badge"><i class="fa-brands fa-cc-visa"></i> Visa</span>
-                        <span class="pay-badge"><i class="fa-brands fa-cc-mastercard"></i> Mastercard</span>
-                        <span class="pay-badge"><i class="fa-brands fa-cc-amex"></i> Amex</span>
-                        <span class="pay-badge"><i class="fa-solid fa-barcode"></i> Boleto Bancário</span>
+                        <span class="pay-badge" data-i18n="footer_pay_pix"><i class="fa-brands fa-pix"></i> Pix Instantâneo</span>
+                        <span class="pay-badge" data-i18n="footer_pay_visa"><i class="fa-brands fa-cc-visa"></i> Visa</span>
+                        <span class="pay-badge" data-i18n="footer_pay_mastercard"><i class="fa-brands fa-cc-mastercard"></i> Mastercard</span>
+                        <span class="pay-badge" data-i18n="footer_pay_amex"><i class="fa-brands fa-cc-amex"></i> Amex</span>
+                        <span class="pay-badge" data-i18n="footer_pay_boleto"><i class="fa-solid fa-barcode"></i> Boleto Bancário</span>
                     </div>
                 </div>
 
                 <div class="security-seals">
-                    <span class="seal-label">Segurança & Certificações:</span>
+                    <span class="seal-label" data-i18n="footer_cert_title">Segurança & Certificações:</span>
                     <div class="seal-badges">
                         <span class="cert-pill"><i class="fa-solid fa-shield-check"></i> CADASTUR 33.134.817</span>
                         <span class="cert-pill"><i class="fa-solid fa-lock"></i> SSL 256-Bit</span>
@@ -1442,13 +1428,13 @@
             </div>
 
             <div class="footer-bottom-bar">
-                <p>&copy; 2027 Sakura Trip Viagens e Turismo Ltda. Todos os direitos reservados. CNPJ: 33.134.817/0001-01.</p>
+                <p data-i18n="footer_copyright">&copy; 2027 Sakura Trip Viagens e Turismo Ltda. Todos os direitos reservados. CNPJ: 33.134.817/0001-01.</p>
                 <div class="legal-links">
-                    <a href="javascript:void(0)" id="linkTermos">Termos de Uso</a>
+                    <a href="javascript:void(0)" id="linkTermos" data-i18n="footer_legal_terms">Termos de Uso</a>
                     <span>•</span>
-                    <a href="javascript:void(0)" id="linkPrivacidade">Política de Privacidade</a>
+                    <a href="javascript:void(0)" id="linkPrivacidade" data-i18n="footer_legal_privacy">Política de Privacidade</a>
                     <span>•</span>
-                    <a href="javascript:void(0)" id="linkContrato">Contrato de Viagem</a>
+                    <a href="javascript:void(0)" id="linkContrato" data-i18n="footer_legal_contract">Contrato de Viagem</a>
                 </div>
             </div>
         </div>
@@ -1467,7 +1453,7 @@
                     <div class="header-branding">
                         <img src="assets/logo_transparent.png" alt="Sakura Trip Logo" class="modal-logo">
                         <div>
-                            <h3>Reserva do Pacote Japão 2027</h3>
+                            <h3 data-i18n="modal_booking_title">Reserva do Pacote Japão 2027</h3>
                             <span class="subtitle">CNPJ: 33.134.817/0001-01 • 10 a 20 de Abril de 2027</span>
                         </div>
                     </div>
@@ -1478,22 +1464,22 @@
                 <div class="checkout-stepper">
                     <div class="step active" data-step="1">
                         <span class="step-num">1</span>
-                        <span class="step-txt">Acomodação</span>
+                        <span class="step-txt" data-i18n="step_accommodation">Acomodação</span>
                     </div>
                     <div class="step-line"></div>
                     <div class="step" data-step="2">
                         <span class="step-num">2</span>
-                        <span class="step-txt">Viajantes</span>
+                        <span class="step-txt" data-i18n="step_travelers">Viajantes</span>
                     </div>
                     <div class="step-line"></div>
                     <div class="step" data-step="3">
                         <span class="step-num">3</span>
-                        <span class="step-txt">Pagamento</span>
+                        <span class="step-txt" data-i18n="step_payment">Pagamento</span>
                     </div>
                     <div class="step-line"></div>
                     <div class="step" data-step="4">
                         <span class="step-num">4</span>
-                        <span class="step-txt">Voucher</span>
+                        <span class="step-txt" data-i18n="step_voucher">Voucher</span>
                     </div>
                 </div>
 
@@ -1501,18 +1487,18 @@
                     
                     <!-- STEP 1: QUARTO & PACOTE -->
                     <div class="step-tab-content active" id="checkoutStep1">
-                        <h4 class="step-title"><i class="fa-solid fa-bed text-sakura"></i> Selecione sua Categoria de Quarto</h4>
-                        <p class="step-desc">O pacote base inclui a categoria Standard Room. Você pode personalizar seu upgrade abaixo:</p>
+                        <h4 class="step-title" data-i18n="step1_title"><i class="fa-solid fa-bed text-sakura"></i> Selecione sua Categoria de Quarto</h4>
+                        <p class="step-desc" data-i18n="step1_desc">O pacote base inclui a categoria Standard Room. Você pode personalizar seu upgrade abaixo:</p>
 
                         <div class="room-selector-list">
                             <label class="room-radio-option selected">
                                 <input type="radio" name="checkoutRoom" value="standard" data-price="80" data-name="STANDARD ROOM" checked>
                                 <div class="option-info">
                                     <div class="title-row">
-                                        <strong>STANDARD ROOM (Incluso no Pacote Base)</strong>
+                                        <strong data-i18n="chk_room_standard_title">STANDARD ROOM (Incluso no Pacote Base)</strong>
                                         <span class="opt-price" data-usd="80" data-type="base">US$ 80/noite</span>
                                     </div>
-                                    <p>Confortável e moderno para 1–2 pessoas.</p>
+                                    <p data-i18n="chk_room_standard_desc">Confortável e moderno para 1–2 pessoas.</p>
                                 </div>
                             </label>
 
@@ -1520,10 +1506,10 @@
                                 <input type="radio" name="checkoutRoom" value="twin" data-price="100" data-name="TWIN ROOM">
                                 <div class="option-info">
                                     <div class="title-row">
-                                        <strong>TWIN ROOM (2 Camas de Solteiro)</strong>
+                                        <strong data-i18n="chk_room_twin_title">TWIN ROOM (2 Camas de Solteiro)</strong>
                                         <span class="opt-price" data-usd="20" data-type="diff">+ US$ 20/noite</span>
                                     </div>
-                                    <p>Ideal para amigos ou colegas compartilhando quarto.</p>
+                                    <p data-i18n="chk_room_twin_desc">Ideal para amigos ou colegas compartilhando quarto.</p>
                                 </div>
                             </label>
 
@@ -1531,10 +1517,10 @@
                                 <input type="radio" name="checkoutRoom" value="japanese" data-price="150" data-name="JAPANESE-STYLE ROOM">
                                 <div class="option-info">
                                     <div class="title-row">
-                                        <strong>JAPANESE-STYLE ROOM 🌸 (Tatami Tradicional)</strong>
+                                        <strong data-i18n="chk_room_japanese_title">JAPANESE-STYLE ROOM 🌸 (Tatami Tradicional)</strong>
                                         <span class="opt-price" data-usd="70" data-type="diff">+ US$ 70/noite</span>
                                     </div>
-                                    <p>Tatamis autênticos, futons de seda e decoração tradicional japonesa.</p>
+                                    <p data-i18n="chk_room_japanese_desc">Tatamis autênticos, futons de seda e decoração tradicional japonesa.</p>
                                 </div>
                             </label>
 
@@ -1542,10 +1528,10 @@
                                 <input type="radio" name="checkoutRoom" value="deluxe" data-price="180" data-name="DELUXE ROOM">
                                 <div class="option-info">
                                     <div class="title-row">
-                                        <strong>DELUXE ROOM (Mais Espaço)</strong>
+                                        <strong data-i18n="chk_room_deluxe_title">DELUXE ROOM (Mais Espaço)</strong>
                                         <span class="opt-price" data-usd="100" data-type="diff">+ US$ 100/noite</span>
                                     </div>
-                                    <p>Mais espaço, lounge e sofisticação.</p>
+                                    <p data-i18n="chk_room_deluxe_desc">Mais espaço, lounge e sofisticação.</p>
                                 </div>
                             </label>
 
@@ -1553,10 +1539,10 @@
                                 <input type="radio" name="checkoutRoom" value="tokyo-view" data-price="220" data-name="TOKYO VIEW ROOM">
                                 <div class="option-info">
                                     <div class="title-row">
-                                        <strong>TOKYO VIEW ROOM (Vista Skyline)</strong>
+                                        <strong data-i18n="chk_room_tokyo_view_title">TOKYO VIEW ROOM (Vista Skyline)</strong>
                                         <span class="opt-price" data-usd="140" data-type="diff">+ US$ 140/noite</span>
                                     </div>
-                                    <p>Vista panorâmica deslumbrante da cidade e Tokyo Tower.</p>
+                                    <p data-i18n="chk_room_tokyo_view_desc">Vista panorâmica deslumbrante da cidade e Tokyo Tower.</p>
                                 </div>
                             </label>
 
@@ -1564,10 +1550,10 @@
                                 <input type="radio" name="checkoutRoom" value="luxury" data-price="400" data-name="LUXURY SUITE">
                                 <div class="option-info">
                                     <div class="title-row">
-                                        <strong>LUXURY SUITE (VIP com Ofurô Privativo)</strong>
+                                        <strong data-i18n="chk_room_luxury_title">LUXURY SUITE (VIP com Ofurô Privativo)</strong>
                                         <span class="opt-price" data-usd="320" data-type="diff">+ US$ 320/noite</span>
                                     </div>
-                                    <p>Experiência premium com banheira estilo onsen e concierge 24h.</p>
+                                    <p data-i18n="chk_room_luxury_desc">Experiência premium com banheira estilo onsen e concierge 24h.</p>
                                 </div>
                             </label>
                         </div>
@@ -1581,49 +1567,49 @@
 
                     <!-- STEP 2: DADOS DOS VIAJANTES -->
                     <div class="step-tab-content" id="checkoutStep2">
-                        <h4 class="step-title"><i class="fa-solid fa-user-pen text-sakura"></i> Dados do Viajante Titular</h4>
-                        <p class="step-desc">Preencha seus dados para emissão do voucher de reserva e documentação aérea:</p>
+                        <h4 class="step-title"><i class="fa-solid fa-user-pen text-sakura"></i> <span data-i18n="step2_title">Dados do Viajante Titular</span></h4>
+                        <p class="step-desc" data-i18n="step2_desc">Preencha seus dados para emissão do voucher de reserva e documentação aérea:</p>
 
                         <form id="travelerForm" onsubmit="return false;">
                             <div class="form-row">
                                 <div class="form-group col-6">
-                                    <label for="leadName">Nome Completo (como no passaporte) *</label>
+                                    <label for="leadName" data-i18n="label_full_name">Nome Completo (como no passaporte) *</label>
                                     <input type="text" id="leadName" placeholder="Ex: Lucas Gabriel da Silva" required value="Lucas Gabriel da Silva">
                                 </div>
                                 <div class="form-group col-6">
-                                    <label for="leadCpf">CPF *</label>
+                                    <label for="leadCpf" data-i18n="label_cpf">CPF *</label>
                                     <input type="text" id="leadCpf" placeholder="000.000.000-00" required value="123.456.789-00">
                                 </div>
                             </div>
 
                             <div class="form-row">
                                 <div class="form-group col-6">
-                                    <label for="leadEmail">E-mail para envio do Voucher *</label>
+                                    <label for="leadEmail" data-i18n="label_voucher_email">E-mail para envio do Voucher *</label>
                                     <input type="email" id="leadEmail" placeholder="seuemail@exemplo.com" required value="lucas.viajante@gmail.com">
                                 </div>
                                 <div class="form-group col-6">
-                                    <label for="leadPhone">Telefone / WhatsApp *</label>
+                                    <label for="leadPhone" data-i18n="label_phone">Telefone / WhatsApp *</label>
                                     <input type="tel" id="leadPhone" placeholder="(11) 98765-4321" required value="(11) 99876-5432">
                                 </div>
                             </div>
 
                             <div class="form-row">
                                 <div class="form-group col-6">
-                                    <label for="leadPassport">Número do Passaporte *</label>
+                                    <label for="leadPassport" data-i18n="label_passport">Número do Passaporte *</label>
                                     <input type="text" id="leadPassport" placeholder="Ex: FP123456" value="BR984721" required>
                                 </div>
                                 <div class="form-group col-6">
-                                    <label for="leadBirth">Data de Nascimento</label>
+                                    <label for="leadBirth" data-i18n="label_birth">Data de Nascimento</label>
                                     <input type="date" id="leadBirth" value="1995-06-15">
                                 </div>
                             </div>
                         </form>
 
                         <div class="step-actions dual">
-                            <button type="button" class="btn btn-secondary-outline btn-prev-step" data-prev="1">
+                            <button type="button" class="btn btn-secondary-outline btn-prev-step" data-prev="1" data-i18n="btn_prev_step">
                                 <i class="fa-solid fa-arrow-left"></i> Voltar
                             </button>
-                            <button type="button" class="btn btn-primary btn-next-step" data-next="3">
+                            <button type="button" class="btn btn-primary btn-next-step" data-next="3" data-i18n="btn_next_payment">
                                 Ir para Pagamento <i class="fa-solid fa-arrow-right"></i>
                             </button>
                         </div>
@@ -1635,18 +1621,18 @@
                             
                             <!-- Payment Options -->
                             <div class="payment-selection-side">
-                                <h4 class="step-title"><i class="fa-solid fa-credit-card text-sakura"></i> Forma de Pagamento</h4>
+                                <h4 class="step-title"><i class="fa-solid fa-credit-card text-sakura"></i> <span data-i18n="step3_title">Forma de Pagamento</span></h4>
                                 
                                 <div class="pay-method-tabs">
-                                    <label class="pay-method-pill active">
+                                    <label class="pay-method-pill active" data-i18n="pay_pill_pix">
                                         <input type="radio" name="payMethod" value="pix" checked>
                                         <i class="fa-brands fa-pix"></i> Pix Instantâneo (5% OFF)
                                     </label>
-                                    <label class="pay-method-pill">
+                                    <label class="pay-method-pill" data-i18n="pay_pill_card">
                                         <input type="radio" name="payMethod" value="card">
                                         <i class="fa-solid fa-credit-card"></i> Cartão de Crédito (12x)
                                     </label>
-                                    <label class="pay-method-pill">
+                                    <label class="pay-method-pill" data-i18n="pay_pill_boleto">
                                         <input type="radio" name="payMethod" value="boleto">
                                         <i class="fa-solid fa-barcode"></i> Boleto Bancário
                                     </label>
@@ -1657,15 +1643,15 @@
                                     <div class="pix-qr-sim">
                                         <div class="qr-placeholder">
                                             <i class="fa-solid fa-qrcode"></i>
-                                            <span>QR Code Pix Gerado</span>
+                                            <span data-i18n="pix_qr_placeholder">QR Code Pix Gerado</span>
                                         </div>
                                         <div class="pix-copy-wrap">
-                                            <label>Chave Pix Copia e Cola (CNPJ):</label>
+                                            <label data-i18n="pix_key_label">Chave Pix Copia e Cola (CNPJ):</label>
                                             <div class="copy-input-group">
                                                 <input type="text" id="pixKeyText" value="33.134.817/0001-01" readonly>
-                                                <button type="button" class="btn-copy-pix" id="btnCopyPix"><i class="fa-regular fa-copy"></i> Copiar CNPJ</button>
+                                                <button type="button" class="btn-copy-pix" id="btnCopyPix" data-i18n="btn_copy_pix"><i class="fa-regular fa-copy"></i> Copiar CNPJ</button>
                                             </div>
-                                            <small class="text-success"><i class="fa-solid fa-check"></i> Desconto de 5% aplicado no Pix!</small>
+                                            <small class="text-success" data-i18n="pix_discount_note"><i class="fa-solid fa-check"></i> Desconto de 5% aplicado no Pix!</small>
                                         </div>
                                     </div>
                                 </div>
@@ -1674,19 +1660,19 @@
                                 <div class="pay-details-box" id="cardDetailsBox" style="display: none;">
                                     <div class="card-form-grid">
                                         <div class="form-group col-12">
-                                            <label>Número do Cartão</label>
+                                            <label data-i18n="cc_number_label">Número do Cartão</label>
                                             <input type="text" placeholder="0000 0000 0000 0000" value="4532 8900 1234 5678">
                                         </div>
                                         <div class="form-group col-6">
-                                            <label>Validade</label>
+                                            <label data-i18n="cc_exp_label">Validade</label>
                                             <input type="text" placeholder="MM/AA" value="08/29">
                                         </div>
                                         <div class="form-group col-6">
-                                            <label>CVV</label>
+                                            <label data-i18n="cc_cvv_label">CVV</label>
                                             <input type="text" placeholder="123" value="888">
                                         </div>
                                         <div class="form-group col-12">
-                                            <label>Parcelamento</label>
+                                            <label data-i18n="cc_installments_label">Parcelamento</label>
                                             <select id="installmentsSelect">
                                                 <option value="1">1x à vista sem juros</option>
                                                 <option value="6">6x sem juros</option>
@@ -1699,42 +1685,42 @@
 
                                 <!-- Boleto Box -->
                                 <div class="pay-details-box" id="boletoDetailsBox" style="display: none;">
-                                    <p><i class="fa-solid fa-barcode"></i> O boleto bancário será gerado com vencimento em 3 dias úteis para compensação automática.</p>
+                                    <p data-i18n="boleto_box_text"><i class="fa-solid fa-barcode"></i> O boleto bancário será gerado com vencimento em 3 dias úteis para compensação automática.</p>
                                 </div>
                             </div>
 
                             <!-- Order Summary Box -->
                             <div class="order-summary-side">
-                                <h4>Resumo do Pedido</h4>
+                                <h4 data-i18n="order_summary_title">Resumo do Pedido</h4>
                                 <div class="summary-line">
-                                    <span>Pacote Japão (10 Dias):</span>
+                                    <span data-i18n="sum_pkg_label">Pacote Japão (10 Dias):</span>
                                     <strong id="summaryBasePrice">US$ 3.877,41</strong>
                                 </div>
                                 <div class="summary-line">
-                                    <span>Quarto Selecionado:</span>
+                                    <span data-i18n="sum_room_label">Quarto Selecionado:</span>
                                     <span id="summaryRoomName">Standard Room</span>
                                 </div>
                                 <div class="summary-line">
-                                    <span>Upgrade de Quarto (9 Noites):</span>
+                                    <span data-i18n="sum_upgrade_label">Upgrade de Quarto (9 Noites):</span>
                                     <span id="summaryRoomUpgrade">US$ 0,00</span>
                                 </div>
                                 <div class="summary-line">
-                                    <span>Taxas de Embarque & JR Pass:</span>
-                                    <span class="text-success">Inclusas</span>
+                                    <span data-i18n="sum_taxes_label">Taxas de Embarque & JR Pass:</span>
+                                    <span class="text-success" data-i18n="sum_taxes_included">Inclusas</span>
                                 </div>
                                 <div class="summary-line coupon-line" id="summaryCouponRow" style="display: none;">
-                                    <span>Cupom (SAKURA10):</span>
+                                    <span data-i18n="sum_coupon_label">Cupom (SAKURA10):</span>
                                     <span class="text-success" id="summaryCouponValue">- US$ 50,00</span>
                                 </div>
                                 <div class="summary-divider"></div>
                                 <div class="summary-total-line">
-                                    <span>Total Estimado:</span>
+                                    <span data-i18n="sum_total_label">Total Estimado:</span>
                                     <div class="total-values">
                                         <strong class="total-usd" id="summaryTotalUSD">US$ 3.877,41</strong>
                                         <span class="total-brl" id="summaryTotalBRL">ou R$ 19.387,05</span>
                                     </div>
                                 </div>
-                                <div class="security-seal-mini">
+                                <div class="security-seal-mini" data-i18n="sum_secure_badge">
                                     <i class="fa-solid fa-lock text-success"></i> Transação Segura • CNPJ 33.134.817/0001-01
                                 </div>
                             </div>
@@ -1742,10 +1728,10 @@
                         </div>
 
                         <div class="step-actions dual">
-                            <button type="button" class="btn btn-secondary-outline btn-prev-step" data-prev="2">
+                            <button type="button" class="btn btn-secondary-outline btn-prev-step" data-prev="2" data-i18n="btn_prev_step">
                                 <i class="fa-solid fa-arrow-left"></i> Voltar
                             </button>
-                            <button type="button" class="btn btn-success btn-finish-booking" id="btnConfirmPayment">
+                            <button type="button" class="btn btn-success btn-finish-booking" id="btnConfirmPayment" data-i18n="btn_confirm_payment">
                                 <i class="fa-solid fa-circle-check"></i> Confirmar & Emitir Voucher
                             </button>
                         </div>
@@ -1755,8 +1741,8 @@
                     <div class="step-tab-content" id="checkoutStep4">
                         <div class="voucher-success-box">
                             <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
-                            <h3>Reserva Confirmada com Sucesso!</h3>
-                            <p class="voucher-subtitle">Seu pacote para a florada das cerejeiras no Japão está garantido.</p>
+                            <h3 data-i18n="voucher_success_title">Reserva Confirmada com Sucesso!</h3>
+                            <p class="voucher-subtitle" data-i18n="voucher_success_sub">Seu pacote para a florada das cerejeiras no Japão está garantido.</p>
 
                             <!-- PREVIEW CONTAINER (INSIDE MODAL) -->
                             <div class="voucher-preview-wrapper" id="voucherModalPreview">
@@ -1764,10 +1750,10 @@
                             </div>
 
                             <div class="voucher-actions">
-                                <button type="button" class="btn btn-primary btn-print-direct" id="btnPrintVoucher">
+                                <button type="button" class="btn btn-primary btn-print-direct" id="btnPrintVoucher" data-i18n="btn_print_voucher">
                                     <i class="fa-solid fa-print"></i> Imprimir / Salvar PDF
                                 </button>
-                                <button type="button" class="btn btn-secondary-outline" id="btnCloseVoucherModal">
+                                <button type="button" class="btn btn-secondary-outline" id="btnCloseVoucherModal" data-i18n="btn_back_site">
                                     <i class="fa-solid fa-house"></i> Voltar ao Site
                                 </button>
                             </div>
@@ -1784,19 +1770,19 @@
         <div class="modal-dialog modal-sm">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h3><i class="fa-solid fa-ticket text-sakura"></i> Consultar Reserva</h3>
+                    <h3><i class="fa-solid fa-ticket text-sakura"></i> <span data-i18n="lookup_title">Consultar Reserva</span></h3>
                     <button class="modal-close-btn" id="btnCloseLookupModal">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <p>Digite seu código localizador (ex: <code>SKR-JP2027-993</code>) ou seu CPF para carregar sua reserva com dados oficiais:</p>
+                    <p data-i18n="lookup_desc">Digite seu código localizador (ex: <code>SKR-JP2027-993</code>) ou seu CPF para carregar sua reserva com dados oficiais:</p>
                     <div class="form-group">
-                        <label>Código Localizador ou CPF</label>
+                        <label data-i18n="lookup_label">Código Localizador ou CPF</label>
                         <input type="text" id="lookupInput" placeholder="Ex: SKR-JP2027-993 ou 123.456.789-00" value="SKR-JP2027-993">
                     </div>
                     <div class="lookup-hint">
-                        <small><i class="fa-solid fa-circle-info text-sakura"></i> Exemplos disponíveis: <strong>SKR-JP2027-993</strong>, <strong>SKR-JP2027-338</strong> ou seu CPF cadastrado.</small>
+                        <small data-i18n="lookup_hint"><i class="fa-solid fa-circle-info text-sakura"></i> Exemplos disponíveis: <strong>SKR-JP2027-993</strong>, <strong>SKR-JP2027-338</strong> ou seu CPF cadastrado.</small>
                     </div>
-                    <button type="button" class="btn btn-primary w-100 mt-3" id="btnSubmitLookup">
+                    <button type="button" class="btn btn-primary w-100 mt-3" id="btnSubmitLookup" data-i18n="btn_submit_lookup">
                         <i class="fa-solid fa-magnifying-glass"></i> Localizar Reserva
                     </button>
                 </div>
@@ -1809,7 +1795,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h3 id="cityModalTitle"><i class="fa-solid fa-location-dot text-sakura"></i> Detalhes da Cidade</h3>
+                    <h3 id="cityModalTitle"><i class="fa-solid fa-location-dot text-sakura"></i> <span data-i18n="city_modal_title">Detalhes da Cidade</span></h3>
                     <button class="modal-close-btn" id="btnCloseCityModal">&times;</button>
                 </div>
                 <div class="modal-body">
@@ -1820,8 +1806,8 @@
                     <div class="city-modal-text" id="cityModalText"></div>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary-outline" id="btnCloseCityFooter">Fechar</button>
-                    <button class="btn btn-primary" id="btnReserveFromCity">Reservar este Pacote</button>
+                    <button class="btn btn-secondary-outline" id="btnCloseCityFooter" data-i18n="btn_close">Fechar</button>
+                    <button class="btn btn-primary" id="btnReserveFromCity" data-i18n="btn_reserve_pkg_city">Reservar este Pacote</button>
                 </div>
             </div>
         </div>
@@ -1832,25 +1818,25 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h3><i class="fa-solid fa-train-fast text-sakura"></i> Transportes Inclusos no Pacote</h3>
+                    <h3><i class="fa-solid fa-train-fast text-sakura"></i> <span data-i18n="transp_title">Transportes Inclusos no Pacote</span></h3>
                     <button class="modal-close-btn" id="btnCloseTransporteModal">&times;</button>
                 </div>
                 <div class="modal-body">
                     <div class="transport-info-block">
-                        <h4><i class="fa-solid fa-plane text-sakura"></i> Voo Internacional (GRU ⇄ HND)</h4>
-                        <p>Voo de ida e volta operado por companhias parceiras de alta pontualidade e serviço de bordo incluso (refeições, bebidas e entretenimento individual). Franquia de bagagem: 2 malas de 23kg despachadas + 1 mala de mão de 10kg.</p>
+                        <h4><i class="fa-solid fa-plane text-sakura"></i> <span data-i18n="transp_flight_title">Voo Internacional (GRU ⇄ HND)</span></h4>
+                        <p data-i18n="transp_flight_desc">Voo de ida e volta operado por companhias parceiras de alta pontualidade e serviço de bordo incluso (refeições, bebidas e entretenimento individual). Franquia de bagagem: 2 malas de 23kg despachadas + 1 mala de mão de 10kg.</p>
                     </div>
                     <div class="transport-info-block">
-                        <h4><i class="fa-solid fa-bolt text-sakura"></i> Trem-Bala Shinkansen</h4>
-                        <p>Bilhetes com assentos reservados nos trechos <strong>Tóquio ➔ Monte Fuji ➔ Quioto ➔ Osaka ➔ Tóquio</strong> na frota Nozomi/Hikari a 320 km/h com vistas panorâmicas.</p>
+                        <h4><i class="fa-solid fa-bolt text-sakura"></i> <span data-i18n="transp_train_title">Trem-Bala Shinkansen</span></h4>
+                        <p data-i18n="transp_train_desc">Bilhetes com assentos reservados nos trechos <strong>Tóquio ➔ Monte Fuji ➔ Quioto ➔ Osaka ➔ Tóquio</strong> na frota Nozomi/Hikari a 320 km/h com vistas panorâmicas.</p>
                     </div>
                     <div class="transport-info-block">
-                        <h4><i class="fa-solid fa-ticket-simple text-sakura"></i> Cartão de Transporte Urbano (IC Card / Pasmo / Suica)</h4>
-                        <p>Cartão recarregável já carregado com saldo para todas as integrações de metrô e linhas urbanas JR em Tóquio, Quioto e Osaka durante os 10 dias de viagem.</p>
+                        <h4><i class="fa-solid fa-ticket-simple text-sakura"></i> <span data-i18n="transp_card_title">Cartão de Transporte Urbano (IC Card / Pasmo / Suica)</span></h4>
+                        <p data-i18n="transp_card_desc">Cartão recarregável já carregado com saldo para todas as integrações de metrô e linhas urbanas JR em Tóquio, Quioto e Osaka durante os 10 dias de viagem.</p>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-primary" id="btnEntendiTransporte">Entendido</button>
+                    <button class="btn btn-primary" id="btnEntendiTransporte" data-i18n="btn_understood">Entendido</button>
                 </div>
             </div>
         </div>
@@ -1861,26 +1847,26 @@
         <div class="modal-dialog modal-sm">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h3><i class="fa-solid fa-coins text-sakura"></i> Conversor de Moeda & Iene</h3>
+                    <h3><i class="fa-solid fa-coins text-sakura"></i> <span data-i18n="conv_title">Conversor de Moeda & Iene</span></h3>
                     <button class="modal-close-btn" id="btnCloseCurrencyModal">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <p>Simule gastos diários no Japão com a cotação estimada:</p>
+                    <p data-i18n="conv_desc">Simule gastos diários no Japão com a cotação estimada:</p>
                     <div class="form-group">
-                        <label>Valor em Dólar (USD $)</label>
+                        <label data-i18n="conv_usd_label">Valor em Dólar (USD $)</label>
                         <input type="number" id="calcUsdInput" value="100" min="1">
                     </div>
                     <div class="currency-conversion-results">
                         <div class="res-row">
-                            <span>Equivalente em Reais (BRL):</span>
+                            <span data-i18n="conv_brl_label">Equivalente em Reais (BRL):</span>
                             <strong id="calcBrlRes">R$ 500,00</strong>
                         </div>
                         <div class="res-row">
-                            <span>Equivalente em Ienes (JPY):</span>
+                            <span data-i18n="conv_jpy_label">Equivalente em Ienes (JPY):</span>
                             <strong id="calcJpyRes">¥ 15.500</strong>
                         </div>
                     </div>
-                    <small class="text-muted"><i class="fa-solid fa-info-circle"></i> Câmbio comercial: 1 USD ≈ 5,00 BRL | 1 USD ≈ 155 JPY.</small>
+                    <small class="text-muted" data-i18n="conv_commercial_rate"><i class="fa-solid fa-info-circle"></i> Câmbio comercial: 1 USD ≈ 5,00 BRL | 1 USD ≈ 155 JPY.</small>
                 </div>
             </div>
         </div>
@@ -1894,8 +1880,8 @@
                     <div class="header-branding">
                         <img src="assets/logo_transparent.png" alt="Sakura Trip Logo" class="modal-logo">
                         <div>
-                            <h3>Acesse sua Conta</h3>
-                            <span class="subtitle">Gerencie suas viagens e vouchers</span>
+                            <h3 data-i18n="login_title">Acesse sua Conta</h3>
+                            <span class="subtitle" data-i18n="login_sub">Gerencie suas viagens e vouchers</span>
                         </div>
                     </div>
                     <button class="modal-close-btn" id="btnCloseLoginModal">&times;</button>
@@ -1910,30 +1896,30 @@
                             <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
                             <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
                         </svg>
-                        <span>Continuar com o Google</span>
+                        <span data-i18n="login_google">Continuar com o Google</span>
                     </button>
 
                     <div class="auth-divider">
-                        <span>ou com seu e-mail</span>
+                        <span data-i18n="login_email_divider">ou com seu e-mail</span>
                     </div>
 
                     <form id="emailLoginForm" onsubmit="return false;">
                         <div class="form-group mb-2">
-                            <label for="loginEmail">E-mail cadastrado</label>
+                            <label for="loginEmail" data-i18n="label_email">E-mail cadastrado</label>
                             <input type="email" id="loginEmail" placeholder="seuemail@exemplo.com" value="lucas.viajante@gmail.com" required>
                         </div>
                         <div class="form-group mb-3">
-                            <label for="loginPassword">Senha</label>
+                            <label for="loginPassword" data-i18n="label_password">Senha</label>
                             <input type="password" id="loginPassword" placeholder="••••••••" value="sakura2027" required>
                         </div>
                         <div class="auth-remember-row mb-3">
                             <label class="checkbox-label">
                                 <input type="checkbox" checked>
-                                <span>Lembrar de mim</span>
+                                <span data-i18n="login_remember">Lembrar de mim</span>
                             </label>
-                            <a href="javascript:void(0)" class="link-forgot">Esqueceu a senha?</a>
+                            <a href="javascript:void(0)" class="link-forgot" data-i18n="login_forgot">Esqueceu a senha?</a>
                         </div>
-                        <button type="submit" class="btn btn-primary w-100" id="btnSubmitEmailLogin">
+                        <button type="submit" class="btn btn-primary w-100" id="btnSubmitEmailLogin" data-i18n="btn_login_submit">
                             <i class="fa-solid fa-right-to-bracket"></i> Entrar na Minha Conta
                         </button>
                     </form>
@@ -1947,19 +1933,19 @@
         <div class="modal-dialog modal-sm">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h3><i class="fa-solid fa-robot text-sakura"></i> Configurar IA Gemini</h3>
+                    <h3><i class="fa-solid fa-robot text-sakura"></i> <span data-i18n="gemini_modal_title">Configurar IA Gemini</span></h3>
                     <button class="modal-close-btn" id="btnCloseGeminiKeyModal">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <p>A atendente <strong>Sayuri</strong> está conectada à API do <strong>Google Gemini</strong>. Você pode configurar ou atualizar sua chave de API gratuita abaixo:</p>
+                    <p data-i18n="gemini_modal_desc">A atendente <strong>Sayuri</strong> está conectada à API do <strong>Google Gemini</strong>. Você pode configurar ou atualizar sua chave de API gratuita abaixo:</p>
                     <div class="form-group">
-                        <label>Google Gemini API Key</label>
+                        <label data-i18n="gemini_label">Google Gemini API Key</label>
                         <input type="password" id="geminiApiKeyInput" placeholder="AIzaSy...">
                     </div>
                     <div class="key-help-links">
-                        <small>Obtenha sua chave gratuita em: <a href="https://aistudio.google.com/" target="_blank" rel="noopener">Google AI Studio <i class="fa-solid fa-arrow-up-right-from-square"></i></a></small>
+                        <small data-i18n="gemini_get_key">Obtenha sua chave gratuita em: <a href="https://aistudio.google.com/" target="_blank" rel="noopener">Google AI Studio <i class="fa-solid fa-arrow-up-right-from-square"></i></a></small>
                     </div>
-                    <button type="button" class="btn btn-primary w-100 mt-3" id="btnSaveGeminiKey">
+                    <button type="button" class="btn btn-primary w-100 mt-3" id="btnSaveGeminiKey" data-i18n="btn_save_gemini">
                         <i class="fa-solid fa-floppy-disk"></i> Salvar e Ativar Gemini
                     </button>
                 </div>
@@ -1972,7 +1958,7 @@
         
         <!-- Speech Bubble -->
         <div class="assistant-speech-bubble" id="assistantBubble">
-            <span class="bubble-text">Olá! Sou a Sayuri da <strong>Sakura Trip</strong>. Como posso te ajudar na sua viagem ao Japão?</span>
+            <span class="bubble-text" data-i18n="sayuri_bubble">Olá! Sou a Sayuri da <strong>Sakura Trip</strong>. Como posso te ajudar na sua viagem ao Japão?</span>
             <button class="bubble-close" id="btnCloseBubble" aria-label="Fechar balão">&times;</button>
         </div>
 
@@ -1991,8 +1977,8 @@
                         <span class="chat-online-dot" title="Online"></span>
                     </div>
                     <div class="chat-user-info">
-                        <strong>Sayuri • Sakura Trip Bot</strong>
-                        <small class="chat-subtitle" id="sayuriModelBadge">Inteligência Artificial</small>
+                        <strong data-i18n="sayuri_bot_title">Sayuri • Sakura Trip Bot</strong>
+                        <small class="chat-subtitle" id="sayuriModelBadge" data-i18n="sayuri_badge_ai">Inteligência Artificial</small>
                     </div>
                 </div>
                 <div class="chat-header-actions">
@@ -2003,26 +1989,22 @@
             <div class="chat-messages-area" id="chatMessagesArea">
                 <div class="chat-msg bot">
                     <img src="assets/sayuri_avatar.png" alt="Sayuri" class="msg-avatar">
-                    <div class="msg-bubble">
-                        Konnichiwa (Olá)! 🌸 Seja bem-vindo à <strong>Sakura Trip</strong>. Sou a Sayuri, sua especialista em viagens para o <strong>Japão em Abril de 2027</strong>!
-                    </div>
+                    <div class="msg-bubble" data-i18n="sayuri_msg_welcome1">Konnichiwa (Olá)! 🌸 Seja bem-vindo à <strong>Sakura Trip</strong>. Sou a Sayuri, sua especialista em viagens para o <strong>Japão em Abril de 2027</strong>!</div>
                 </div>
                 <div class="chat-msg bot">
                     <img src="assets/sayuri_avatar.png" alt="Sayuri" class="msg-avatar">
-                    <div class="msg-bubble">
-                        Selecione um tópico rápido abaixo ou faça qualquer pergunta sobre o roteiro, valores, hotéis, trem-bala e vistos:
-                    </div>
+                    <div class="msg-bubble" data-i18n="sayuri_msg_welcome2">Selecione um tópico rápido abaixo ou faça qualquer pergunta sobre o roteiro, valores, hotéis, trem-bala e vistos:</div>
                 </div>
             </div>
 
             <!-- Quick FAQ Topic Buttons -->
             <div class="chat-quick-replies" id="chatQuickReplies">
-                <button class="quick-reply-chip" data-query="datas">📅 Datas & Prazos</button>
-                <button class="quick-reply-chip" data-query="precos">💰 Valores & Pagamento</button>
-                <button class="quick-reply-chip" data-query="incluso">🎒 O Que Está Incluso?</button>
-                <button class="quick-reply-chip" data-query="quartos">🏨 Tipos de Quartos</button>
-                <button class="quick-reply-chip" data-query="visto">📄 Visto & Passaporte</button>
-                <button class="quick-reply-chip" data-query="cnpj">🏢 CNPJ & Segurança</button>
+                <button class="quick-reply-chip" data-query="datas" data-i18n="chip_dates">📅 Datas & Prazos</button>
+                <button class="quick-reply-chip" data-query="precos" data-i18n="chip_prices">💰 Valores & Pagamento</button>
+                <button class="quick-reply-chip" data-query="incluso" data-i18n="chip_included">🎒 O Que Está Incluso?</button>
+                <button class="quick-reply-chip" data-query="quartos" data-i18n="chip_rooms">🏨 Tipos de Quartos</button>
+                <button class="quick-reply-chip" data-query="visto" data-i18n="chip_visa">📄 Visto & Passaporte</button>
+                <button class="quick-reply-chip" data-query="cnpj" data-i18n="chip_trust">🏢 CNPJ & Segurança</button>
             </div>
 
             <!-- Chat Input Area -->
