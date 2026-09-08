@@ -1,10 +1,11 @@
 /**
- * SAKURA TRIP - Multilingual Translation Dictionary
+ * SAKURA TRIP - Multilingual Translation Dictionary (Comprehensive Full-Site i18n)
  * Languages supported: pt (Português), en (English), ja (日本語)
  */
 
 window.I18N_DICTIONARY = {
   "pt": {
+    // Top Bar & Header
     "announcement_badge": "Temporada Sakura 2027",
     "announcement_text": "Inscrições abertas até 10 de Janeiro de 2027! Vagas limitadas para a florada das cerejeiras no Japão.",
     "nav_package": "Pacote Japão 2027",
@@ -18,11 +19,11 @@ window.I18N_DICTIONARY = {
     "nav_login": "Entrar / Cadastro",
     "nav_my_account": "Minha Conta",
     "nav_logout": "Sair",
-    
+
+    // Search Engine Widget
     "tab_package": "Pacote Completo (Voo + Hotel + Trem)",
     "tab_flight": "Passagem GRU ⇄ HND",
     "tab_hotels_only": "Apenas Hospedagens",
-    
     "trip_roundtrip": "Ida e Volta (10 Dias)",
     "trip_dates_pill": "10 a 20 de Abril de 2027",
     "label_origin": "Origem",
@@ -35,19 +36,52 @@ window.I18N_DICTIONARY = {
     "stopover_shinkansen": "Stopover Shinkansen: Quioto, Osaka & Monte Fuji Inclusos",
     "btn_coupon_toggle": "Inserir Cupom de Desconto",
     "btn_apply": "Aplicar",
-    
+    "travelers_summary_default": "1 Viajante (Adulto)",
+
+    // Hero Slide 1: Japan Future & Tradition
     "hero1_tag": "Pacote Premium Japão 2027",
     "hero1_title": "JAPÃO – Onde a Tradição Encontra o Futuro",
-    "hero1_lead": "Uma viagem inesquecível que combina tradição milenar, diversão, tecnologia de ponta e natureza exuberante!",
+    "hero1_lead": "Uma viagem inesquecível que combina <strong>tradição milenar, diversão, tecnologia de ponta e natureza exuberante!</strong>",
     "hero1_feat_flight": "Voo GRU ⇄ HND",
     "hero1_feat_hotels": "9 Noites de Hotéis",
     "hero1_feat_train": "Trem-Bala Shinkansen",
     "hero1_feat_guide": "Guia Especializado",
     "hero1_price_label": "Preço por pessoa a partir de:",
-    "hero1_installments": "ou em até 12x sem juros no cartão de crédito",
+    "hero1_installments": "ou em até <strong>12x sem juros</strong> no cartão de crédito",
     "hero1_btn_cta": "Garantir Minha Vaga",
     "hero1_btn_ghost": "Ver Roteiro Completo",
-    
+
+    // Hero Slide 2: Pop Culture & Parks
+    "hero2_tag": "Cultura Pop & Parques Temáticos",
+    "hero2_title": "Tóquio & Osaka: A Magia do Entretenimento",
+    "hero2_lead": "Viva a emoção em <strong>Tokyo Disneyland, DisneySea e Universal Studios Japan</strong>, além dos templos e do bairro geek de Akihabara.",
+    "hero2_feat_tickets": "Ingressos Facilitados",
+    "hero2_feat_akiba": "Akihabara & Shibuya",
+    "hero2_feat_nintendo": "Super Nintendo World",
+    "hero2_price_label": "10 dias de experiências únicas:",
+    "hero2_price_num": "10",
+    "hero2_price_unit": "Dias Imersivos",
+    "hero2_installments": "Prazo final para inscrições: <strong>10 de Janeiro de 2027</strong>",
+    "hero2_btn_cta": "Conhecer Atrações",
+    "hero2_btn_ghost": "Ver Quartos",
+    "hero2_badge_title": "Parques Temáticos",
+    "hero2_badge_sub": "DisneySea + USJ Inclusos",
+
+    // Hero Slide 3: Mount Fuji & Shinkansen
+    "hero3_tag": "Natureza & Tradição",
+    "hero3_title": "Monte Fuji, Santuários & O Trem-Bala",
+    "hero3_lead": "Cruze o país a 320 km/h a bordo do <strong>Trem-Bala japonês</strong>, admire o Monte Fuji e caminhe entre os cervos livres de Nara.",
+    "hero3_feat_fuji": "Monte Fuji & Lagos",
+    "hero3_feat_fushimi": "Santuário Fushimi Inari",
+    "hero3_feat_nara": "Parque dos Cervos de Nara",
+    "hero3_price_label": "Viagem de 10 a 20 de Abril de 2027:",
+    "hero3_installments": "Transporte completo: <strong>Avião + Shinkansen + Metrô</strong>",
+    "hero3_btn_cta": "Reservar Pacote",
+    "hero3_btn_ghost": "Dicas de Viagem",
+    "hero3_badge_title": "Shinkansen Expresso",
+    "hero3_badge_sub": "Passe de Trem Incluso",
+
+    // Manage Trip Shortcuts
     "manage_title": "GERENCIE SUA VIAGEM",
     "manage_sub": "Acesse rapidamente todos os serviços, vouchers, regras de bagagem e itinerário da sua aventura no Japão.",
     "card_quick_reserva_title": "Minha Reserva",
@@ -63,41 +97,94 @@ window.I18N_DICTIONARY = {
     "card_quick_moeda_title": "Câmbio Dólar & Iene",
     "card_quick_moeda_desc": "Conversor e guia financeiro para gastos no Japão.",
 
-    "exp_badge": "Experiências Inclusas",
+    // Overview Highlight Bar
+    "bar_dest_label": "Destino Principal",
+    "bar_dest_val": "Japão (5 Cidades)",
+    "bar_dest_sub": "Tóquio, Quioto, Osaka, Nara, Fuji",
+    "bar_dates_label": "Datas da Viagem",
+    "bar_dates_val": "10 a 20 de Abril de 2027",
+    "bar_dates_sub": "10 Dias / Florada Sakura",
+    "bar_deadline_label": "Prazo Limite de Reserva",
+    "bar_deadline_val": "10 de Janeiro de 2027",
+    "bar_deadline_sub": "Garanta antes que esgote",
+    "bar_route_label": "Embarque & Desembarque",
+    "bar_route_val": "São Paulo (GRU) ➔ Tóquio (HND)",
+    "bar_route_sub": "Transporte: Avião, Shinkansen, Metrô",
+    "bar_from_label": "A partir de",
+    "bar_per_person": "por pessoa",
+    "bar_btn_book": "Reservar",
+
+    // Experience Pillars
+    "exp_badge": "🌸 Experiências Inclusas",
     "exp_title": "Durante a viagem, você poderá:",
     "exp_sub": "O Japão é um dos destinos mais fascinantes do mundo, combinando tradições ancestrais, tecnologia de ponta, gastronomia inigualável e natureza preservada.",
-    
-    "attr_badge": "Principais Destinos",
+    "pillar1_cat": "Diversão",
+    "pillar1_title": "Parques Temáticos",
+    "pillar1_desc": "Visite <strong>Tokyo Disneyland</strong>, <strong>Tokyo DisneySea</strong> e <strong>Universal Studios Japan</strong> (com a incrível área de Super Nintendo World e Harry Potter).",
+    "pillar2_cat": "Tradição",
+    "pillar2_title": "Cultura & Tradição",
+    "pillar2_desc": "Vivencie a essência milenar japonesa visitando <strong>templos históricos, santuários sagrados, cerimônias tradicionais do chá</strong> e a experiência com kimonos autênticos.",
+    "pillar3_cat": "Gastronomia",
+    "pillar3_title": "Culinária Autêntica",
+    "pillar3_desc": "Deguste o melhor da gastronomia mundial: <strong>sushi e sashimi frescos, ramen artesanal, takoyaki, tempura crocante</strong> e doces típicos japoneses (wagashi e matcha).",
+    "pillar4_cat": "Natureza",
+    "pillar4_title": "Natureza & Monte Fuji",
+    "pillar4_desc": "Maravilhe-se com a <strong>florada das cerejeiras (Sakura)</strong>, jardins zen tradicionais perfeitamente esculpidos, florestas de bambu e a majestade do <strong>Monte Fuji</strong>.",
+    "pillar5_cat": "Pop & Tech",
+    "pillar5_title": "Cultura Pop & Games",
+    "pillar5_desc": "Mergulhe no universo dos <strong>animes, mangás, videogames clássicos e lojas de tecnologia</strong> nos famosos distritos de Akihabara, Shibuya e Shinjuku.",
+    "pillar6_cat": "Velocidade",
+    "pillar6_title": "Viagem de Shinkansen",
+    "pillar6_desc": "Experimente a lendária precisão e o conforto do <strong>trem-bala japonês</strong>, viajando a mais de 300 km/h com vistas panorâmicas entre as capitais do país.",
+
+    // Attractions Tabs & Section
+    "attr_badge": "⛩️ Principais Destinos",
     "attr_title": "Roteiro Pelas Principais Atrações",
     "attr_sub": "Descubra os pontos turísticos mais emblemáticos que você visitará com nosso guia exclusivo da Sakura Trip.",
+    "tab_all_cities": "Todas as Cidades",
+    "tab_tokyo": "Tóquio",
+    "tab_kyoto": "Quioto",
+    "tab_fuji": "Monte Fuji",
+    "tab_osaka": "Osaka",
+    "tab_nara": "Nara",
     "btn_view_details": "Ver Detalhes",
-    
-    "rooms_badge": "Hospedagem Inclusa no Pacote",
+
+    // Accommodations & Rooms
+    "rooms_badge": "🏨 Hospedagem Inclusa no Pacote",
     "rooms_title": "Hotéis Inclusos & Categorias de Quartos",
     "rooms_sub": "Escolha o quarto perfeito para tornar sua viagem ao Japão ainda mais inesquecível e confortável!",
+    "rooms_quote": "“Na Sakura Trip, sua jornada começa no momento em que você abre a porta.”",
+    "hotel_tokyo_nights": "4 Noites inclusas",
+    "hotel_kyoto_nights": "2 Noites inclusas",
+    "hotel_osaka_nights": "3 Noites inclusas",
+    "room_from": "A partir de",
+    "room_per": "/noite",
     "btn_select_room": "Selecionar Quarto",
-    
-    "itinerary_badge": "Programação Completa",
+    "rooms_footnote": "* Tarifas estimadas por quarto/noite; sujeitas à disponibilidade e regras contratuais.",
+
+    // Itinerary & Tips
+    "itinerary_badge": "🗺️ Programação Completa",
     "itinerary_title": "Roteiro Dia a Dia: 10 Dias no Japão",
     "itinerary_sub": "Planejado cuidadosamente pela Sakura Trip para você aproveitar o melhor da primavera japonesa sem preocupações.",
-    
-    "tips_badge": "Preparativos da Viagem",
+    "tips_badge": "🎒 Preparativos da Viagem",
     "tips_title": "SAKURA TRIP TIPS: O Que Levar na Mala",
     "tips_progress": "Progresso da sua Mala",
     "tips_mark_all": "Marcar Todos",
     "tips_reset": "Limpar",
-    
-    "cta_badge": "ATENÇÃO AOS PRAZOS",
+
+    // CTA Deadline Banner
+    "cta_badge": "🌸 ATENÇÃO AOS PRAZOS",
     "cta_title": "Garanta sua vaga na viagem dos seus sonhos ao Japão!",
-    "cta_desc": "O prazo limite para confirmação e reserva é 10 de Janeiro de 2027. As vagas para a florada de cerejeiras são extremamente concorridas.",
+    "cta_desc": "O prazo limite para confirmação e reserva é <strong>10 de Janeiro de 2027</strong>. As vagas para a florada de cerejeiras são extremamente concorridas.",
     "btn_cta_reserve": "Fazer Pré-Reserva Imediata",
     "btn_cta_sayuri": "Falar com a Assistente"
   },
-  
+
   "en": {
+    // Top Bar & Header
     "announcement_badge": "Sakura Season 2027",
     "announcement_text": "Bookings open until January 10, 2027! Limited spots for cherry blossom season in Japan.",
-    "nav_package": "Japan Package 2027",
+    "nav_package": "Japan Tour 2027",
     "nav_attractions": "Attractions",
     "nav_experiences": "Experiences",
     "nav_hotels": "Hotels & Rooms",
@@ -108,36 +195,69 @@ window.I18N_DICTIONARY = {
     "nav_login": "Sign In / Register",
     "nav_my_account": "My Account",
     "nav_logout": "Logout",
-    
-    "tab_package": "Complete Package (Flight + Hotel + Train)",
+
+    // Search Engine Widget
+    "tab_package": "Full Package (Flight + Hotel + Shinkansen)",
     "tab_flight": "Flight GRU ⇄ HND",
     "tab_hotels_only": "Hotels Only",
-    
     "trip_roundtrip": "Round Trip (10 Days)",
     "trip_dates_pill": "April 10 to 20, 2027",
     "label_origin": "Origin",
     "label_destination": "Destination",
     "label_dates": "Package Dates",
-    "sub_origin": "Guarulhos Int Airport",
-    "sub_destination": "Tokyo Haneda Airport",
+    "sub_origin": "Guarulhos Int'l Airport",
+    "sub_destination": "Tokyo Haneda Int'l Airport",
     "sub_dates": "10 Days / Sakura Bloom Season",
     "btn_search": "Search Packages",
     "stopover_shinkansen": "Shinkansen Stopover: Kyoto, Osaka & Mount Fuji Included",
     "btn_coupon_toggle": "Enter Promo Code",
     "btn_apply": "Apply",
-    
+    "travelers_summary_default": "1 Traveler (Adult)",
+
+    // Hero Slide 1: Japan Future & Tradition
     "hero1_tag": "Premium Japan Package 2027",
     "hero1_title": "JAPAN – Where Tradition Meets the Future",
-    "hero1_lead": "An unforgettable journey blending millennial heritage, thrilling theme parks, cutting-edge tech, and breathtaking landscapes!",
+    "hero1_lead": "An unforgettable journey blending <strong>millennial heritage, thrilling theme parks, cutting-edge tech, and breathtaking landscapes!</strong>",
     "hero1_feat_flight": "Flight GRU ⇄ HND",
     "hero1_feat_hotels": "9 Hotel Nights",
     "hero1_feat_train": "Shinkansen Bullet Train",
-    "hero1_feat_guide": "Expert Guide",
+    "hero1_feat_guide": "Expert Tour Guide",
     "hero1_price_label": "Starting per person from:",
-    "hero1_installments": "or up to 12 interest-free installments",
+    "hero1_installments": "or in up to <strong>12 interest-free installments</strong>",
     "hero1_btn_cta": "Secure My Spot",
     "hero1_btn_ghost": "View Full Itinerary",
-    
+
+    // Hero Slide 2: Pop Culture & Parks
+    "hero2_tag": "Pop Culture & Theme Parks",
+    "hero2_title": "Tokyo & Osaka: The Magic of Entertainment",
+    "hero2_lead": "Feel the thrill at <strong>Tokyo Disneyland, DisneySea, and Universal Studios Japan</strong>, plus sacred temples and Akihabara's geek hub.",
+    "hero2_feat_tickets": "Fast-Track Tickets",
+    "hero2_feat_akiba": "Akihabara & Shibuya",
+    "hero2_feat_nintendo": "Super Nintendo World",
+    "hero2_price_label": "10 days of unique experiences:",
+    "hero2_price_num": "10",
+    "hero2_price_unit": "Immersive Days",
+    "hero2_installments": "Registration deadline: <strong>January 10, 2027</strong>",
+    "hero2_btn_cta": "Explore Attractions",
+    "hero2_btn_ghost": "View Rooms",
+    "hero2_badge_title": "Theme Parks",
+    "hero2_badge_sub": "DisneySea + USJ Included",
+
+    // Hero Slide 3: Mount Fuji & Shinkansen
+    "hero3_tag": "Nature & Heritage",
+    "hero3_title": "Mount Fuji, Sacred Shrines & Bullet Train",
+    "hero3_lead": "Travel across Japan at 320 km/h aboard the <strong>Japanese Shinkansen</strong>, admire majestic Mount Fuji and meet the free-roaming deer of Nara.",
+    "hero3_feat_fuji": "Mount Fuji & Lakes",
+    "hero3_feat_fushimi": "Fushimi Inari Shrine",
+    "hero3_feat_nara": "Nara Deer Park",
+    "hero3_price_label": "Trip from April 10 to 20, 2027:",
+    "hero3_installments": "All transport included: <strong>Flight + Shinkansen + Subway</strong>",
+    "hero3_btn_cta": "Book Package",
+    "hero3_btn_ghost": "Travel Tips",
+    "hero3_badge_title": "Shinkansen Express",
+    "hero3_badge_sub": "Train Pass Included",
+
+    // Manage Trip Shortcuts
     "manage_title": "MANAGE YOUR TRIP",
     "manage_sub": "Quickly access your booking vouchers, room upgrades, luggage checklist, and daily travel schedule.",
     "card_quick_reserva_title": "My Booking",
@@ -153,38 +273,91 @@ window.I18N_DICTIONARY = {
     "card_quick_moeda_title": "Dollar & Yen Exchange",
     "card_quick_moeda_desc": "Live currency converter and travel financial guide.",
 
-    "exp_badge": "Included Experiences",
-    "exp_title": "During the journey, you will experience:",
+    // Overview Highlight Bar
+    "bar_dest_label": "Main Destination",
+    "bar_dest_val": "Japan (5 Cities)",
+    "bar_dest_sub": "Tokyo, Kyoto, Osaka, Nara, Fuji",
+    "bar_dates_label": "Travel Dates",
+    "bar_dates_val": "April 10 to 20, 2027",
+    "bar_dates_sub": "10 Days / Sakura Bloom Season",
+    "bar_deadline_label": "Booking Deadline",
+    "bar_deadline_val": "January 10, 2027",
+    "bar_deadline_sub": "Book before spots sell out",
+    "bar_route_label": "Departure & Arrival",
+    "bar_route_val": "São Paulo (GRU) ➔ Tokyo (HND)",
+    "bar_route_sub": "Transports: Flight, Shinkansen, Subway",
+    "bar_from_label": "Starting from",
+    "bar_per_person": "per person",
+    "bar_btn_book": "Book Now",
+
+    // Experience Pillars
+    "exp_badge": "🌸 Included Experiences",
+    "exp_title": "During the trip, you will experience:",
     "exp_sub": "Japan is one of the world's most captivating destinations, marrying ancient customs, world-class gastronomy, and sublime nature.",
-    
-    "attr_badge": "Key Destinations",
+    "pillar1_cat": "Fun & Parks",
+    "pillar1_title": "Theme Parks",
+    "pillar1_desc": "Visit <strong>Tokyo Disneyland</strong>, <strong>Tokyo DisneySea</strong>, and <strong>Universal Studios Japan</strong> (featuring Super Nintendo World and Harry Potter).",
+    "pillar2_cat": "Heritage",
+    "pillar2_title": "Culture & Tradition",
+    "pillar2_desc": "Experience authentic Japanese millennial culture by visiting <strong>historic temples, sacred shrines, traditional tea ceremonies</strong>, and kimono dressings.",
+    "pillar3_cat": "Gastronomy",
+    "pillar3_title": "Authentic Cuisine",
+    "pillar3_desc": "Savor world-renowned cuisine: <strong>fresh sushi & sashimi, artisan ramen, Osaka takoyaki, crispy tempura</strong>, and traditional sweets (wagashi & matcha).",
+    "pillar4_cat": "Nature",
+    "pillar4_title": "Nature & Mount Fuji",
+    "pillar4_desc": "Marvel at the <strong>cherry blossoms (Sakura)</strong> in full bloom, sculpted Zen gardens, Arashiyama bamboo groves, and majestic <strong>Mount Fuji</strong>.",
+    "pillar5_cat": "Pop & Tech",
+    "pillar5_title": "Pop Culture & Gaming",
+    "pillar5_desc": "Dive into the vibrant universe of <strong>anime, manga, retro games, and electronics</strong> across famous Akihabara, Shibuya, and Shinjuku districts.",
+    "pillar6_cat": "High Speed",
+    "pillar6_title": "Shinkansen Journey",
+    "pillar6_desc": "Experience the legendary precision and comfort of the <strong>Japanese bullet train</strong>, cruising at over 300 km/h with panoramic views between imperial capitals.",
+
+    // Attractions Tabs & Section
+    "attr_badge": "⛩️ Key Destinations",
     "attr_title": "Main Attractions Itinerary",
     "attr_sub": "Discover the most iconic cultural and entertainment sights guided by Sakura Trip.",
+    "tab_all_cities": "All Cities",
+    "tab_tokyo": "Tokyo",
+    "tab_kyoto": "Kyoto",
+    "tab_fuji": "Mount Fuji",
+    "tab_osaka": "Osaka",
+    "tab_nara": "Nara",
     "btn_view_details": "View Details",
-    
-    "rooms_badge": "Accommodation Included",
+
+    // Accommodations & Rooms
+    "rooms_badge": "🏨 Accommodation Included",
     "rooms_title": "Included Hotels & Room Types",
     "rooms_sub": "Choose the perfect room style to make your Japanese trip extra comfortable and memorable!",
+    "rooms_quote": "“At Sakura Trip, your journey begins the moment you open the door.”",
+    "hotel_tokyo_nights": "4 Nights included",
+    "hotel_kyoto_nights": "2 Nights included",
+    "hotel_osaka_nights": "3 Nights included",
+    "room_from": "From",
+    "room_per": "/night",
     "btn_select_room": "Select Room",
-    
-    "itinerary_badge": "Full Schedule",
+    "rooms_footnote": "* Estimated rates per room/night; subject to availability and contractual terms.",
+
+    // Itinerary & Tips
+    "itinerary_badge": "🗺️ Full Schedule",
     "itinerary_title": "Day-by-Day 10-Day Japan Itinerary",
     "itinerary_sub": "Carefully planned by Sakura Trip so you can enjoy the best of Japanese spring hassle-free.",
-    
-    "tips_badge": "Trip Preparation",
+    "tips_badge": "🎒 Trip Preparation",
     "tips_title": "SAKURA TRIP TIPS: Packing Essentials",
     "tips_progress": "Luggage Checklist Progress",
     "tips_mark_all": "Check All",
     "tips_reset": "Reset",
-    
-    "cta_badge": "DEADLINE NOTICE",
+
+    // CTA Deadline Banner
+    "cta_badge": "🌸 DEADLINE NOTICE",
     "cta_title": "Book your dream trip to Japan now!",
-    "cta_desc": "Booking deadline is January 10, 2027. Seats for the peak cherry blossom bloom are strictly limited.",
-    "btn_cta_reserve": "Make Instant Pre-Booking",
+    "cta_desc": "Booking deadline is <strong>January 10, 2027</strong>. Seats for the peak cherry blossom bloom are strictly limited.",
+    "btn_cta_reserve": "Instant Pre-Booking",
     "btn_cta_sayuri": "Chat with Sayuri AI"
   },
-  
+
   "ja": {
+    // Top Bar & Header
     "announcement_badge": "2027年 桜シーズン",
     "announcement_text": "2027年1月10日まで予約受付中！日本の桜の開花時期を満喫する特別限定ツアー。",
     "nav_package": "日本ツアー 2027",
@@ -198,11 +371,11 @@ window.I18N_DICTIONARY = {
     "nav_login": "ログイン / 新規登録",
     "nav_my_account": "マイアカウント",
     "nav_logout": "ログアウト",
-    
+
+    // Search Engine Widget
     "tab_package": "フルパッケージ (航空券 + ホテル + 新幹線)",
     "tab_flight": "航空券 GRU ⇄ HND",
     "tab_hotels_only": "宿泊施設のみ",
-    
     "trip_roundtrip": "往復 (10日間)",
     "trip_dates_pill": "2027年4月10日〜20日",
     "label_origin": "出発地",
@@ -215,19 +388,52 @@ window.I18N_DICTIONARY = {
     "stopover_shinkansen": "新幹線ストップオーバー: 京都・大阪・富士山を含む",
     "btn_coupon_toggle": "クーポンコードを入力",
     "btn_apply": "適用",
-    
+    "travelers_summary_default": "旅行者 1名 (大人)",
+
+    // Hero Slide 1: Japan Future & Tradition
     "hero1_tag": "2027年 プレミアム日本ツアー",
     "hero1_title": "日本 – 伝統と未来が交差する国",
-    "hero1_lead": "千年の伝統、最先端テクノロジー、感動のテーマパーク、美しい大自然が融合した忘れられない旅！",
+    "hero1_lead": "千年の伝統、最先端テクノロジー、感動のテーマパーク、美しい大自然が融合した<strong>忘れられない旅！</strong>",
     "hero1_feat_flight": "往復航空券 GRU ⇄ HND",
     "hero1_feat_hotels": "ホテル9泊分",
     "hero1_feat_train": "新幹線乗車券",
     "hero1_feat_guide": "専任ガイド付き",
     "hero1_price_label": "お一人様基本料金:",
-    "hero1_installments": "または最大12回の手数料無料分割払い",
+    "hero1_installments": "または最大<strong>12回の手数料無料分割払い</strong>",
     "hero1_btn_cta": "今すぐ席を確保",
     "hero1_btn_ghost": "詳細な旅程を見る",
-    
+
+    // Hero Slide 2: Pop Culture & Parks
+    "hero2_tag": "ポップカルチャー & テーマパーク",
+    "hero2_title": "東京＆大阪: エンターテインメントの魔法",
+    "hero2_lead": "<strong>東京ディズニーランド、ディズニーシー、ユニバーサル・スタジオ・ジャパン</strong>、さらに歴史ある寺院や秋葉原の街を満喫！",
+    "hero2_feat_tickets": "優先入場チケット",
+    "hero2_feat_akiba": "秋葉原 & 渋谷",
+    "hero2_feat_nintendo": "スーパー・ニンテンドー・ワールド",
+    "hero2_price_label": "10日間の特別体験:",
+    "hero2_price_num": "10",
+    "hero2_price_unit": "日間の感動体験",
+    "hero2_installments": "お申し込み期限: <strong>2027年1月10日</strong>",
+    "hero2_btn_cta": "アトラクションを見る",
+    "hero2_btn_ghost": "客室を見る",
+    "hero2_badge_title": "テーマパーク",
+    "hero2_badge_sub": "ディズニーシー + USJ 入場券付き",
+
+    // Hero Slide 3: Mount Fuji & Shinkansen
+    "hero3_tag": "自然 & 伝統文化",
+    "hero3_title": "富士山、古都の社寺、そして夢の新幹線",
+    "hero3_lead": "時速320kmの<strong>東海道新幹線</strong>で日本を縦断。霊峰富士山を仰ぎ、奈良の鹿たちと触れ合う心洗われるひととき。",
+    "hero3_feat_fuji": "富士山 & 富士五湖",
+    "hero3_feat_fushimi": "伏見稲荷大社",
+    "hero3_feat_nara": "奈良公園の鹿",
+    "hero3_price_label": "旅行期間: 2027年4月10日〜20日:",
+    "hero3_installments": "交通費全込み: <strong>航空券 + 新幹線 + 地下鉄パス</strong>",
+    "hero3_btn_cta": "ツアーを予約",
+    "hero3_btn_ghost": "旅行の準備ヒント",
+    "hero3_badge_title": "新幹線エクスプレス",
+    "hero3_badge_sub": "JRトレインパス付き",
+
+    // Manage Trip Shortcuts
     "manage_title": "ご旅行の管理",
     "manage_sub": "予約確認書、客室アップグレード、持ち物チェックリスト、旅程表にすばやくアクセス。",
     "card_quick_reserva_title": "予約の確認",
@@ -243,33 +449,85 @@ window.I18N_DICTIONARY = {
     "card_quick_moeda_title": "為替レート計算",
     "card_quick_moeda_desc": "ドル・レアル・日本円の為替計算機。",
 
-    "exp_badge": "含まれる体験",
+    // Overview Highlight Bar
+    "bar_dest_label": "主な目的地",
+    "bar_dest_val": "日本 (5都市周遊)",
+    "bar_dest_sub": "東京、京都、大阪、奈良、富士山",
+    "bar_dates_label": "ご旅行日程",
+    "bar_dates_val": "2027年4月10日〜20日",
+    "bar_dates_sub": "10日間 / 桜の満開シーズン",
+    "bar_deadline_label": "予約締め切り",
+    "bar_deadline_val": "2027年1月10日",
+    "bar_deadline_sub": "満席になり次第終了",
+    "bar_route_label": "出発・到着空港",
+    "bar_route_val": "サンパウロ (GRU) ➔ 東京 (HND)",
+    "bar_route_sub": "交通機関: 航空機、新幹線、地下鉄",
+    "bar_from_label": "お一人様基本料金",
+    "bar_per_person": "より",
+    "bar_btn_book": "予約する",
+
+    // Experience Pillars
+    "exp_badge": "🌸 含まれる体験",
     "exp_title": "この旅行で体験できること:",
     "exp_sub": "日本は古代の伝統、世界最高峰の食文化、豊かな大自然が融合する世界で最も魅力的な旅行先の一つです。",
-    
-    "attr_badge": "主要な観光地",
+    "pillar1_cat": "エンタメ",
+    "pillar1_title": "テーマパーク",
+    "pillar1_desc": "<strong>東京ディズニーランド</strong>、<strong>東京ディズニーシー</strong>、<strong>ユニバーサル・スタジオ・ジャパン</strong>（マリオ＆ハリポタエリア）へ入場！",
+    "pillar2_cat": "伝統文化",
+    "pillar2_title": "歴史と文化の真髄",
+    "pillar2_desc": "千年の歴史を誇る<strong>古寺・神社巡り、本格的な茶道体験</strong>、本物の着物・浴衣体験で日本文化の奥深さを堪能。",
+    "pillar3_cat": "日本食の粋",
+    "pillar3_title": "本場の極上グルメ",
+    "pillar3_desc": "世界を魅了する絶品料理: <strong>獲れたて寿司・刺身、手打ちラーメン、大阪たこ焼き、サクサク天ぷら</strong>、本格抹茶スイーツ。",
+    "pillar4_cat": "四季の大自然",
+    "pillar4_title": "満開の桜と富士山",
+    "pillar4_desc": "春爛漫の<strong>満開の桜（Sakura）</strong>、美しく整えられた日本庭園、嵐山の竹林、そして威厳ある<strong>富士山</strong>の絶景を満喫。",
+    "pillar5_cat": "ポップ＆テック",
+    "pillar5_title": "ポップカルチャー & ゲーム",
+    "pillar5_desc": "秋葉原、渋谷、新宿の世界的な<strong>アニメ、マンガ、レトロゲーム、最新エレクトロニクス</strong>の聖地へ飛び込みましょう。",
+    "pillar6_cat": "スピードと感動",
+    "pillar6_title": "東海道新幹線の旅",
+    "pillar6_desc": "世界最高峰の定時運行と快適性を誇る<strong>日本の新幹線</strong>。時速300km超で車窓からの富士山を眺めながら快適に移動。",
+
+    // Attractions Tabs & Section
+    "attr_badge": "⛩️ 主要な観光地",
     "attr_title": "主要観光スポット巡り",
     "attr_sub": "サクラトリップ専任ガイドがご案内する象徴的な名所をご紹介します。",
+    "tab_all_cities": "すべての都市",
+    "tab_tokyo": "東京",
+    "tab_kyoto": "京都",
+    "tab_fuji": "富士山",
+    "tab_osaka": "大阪",
+    "tab_nara": "奈良",
     "btn_view_details": "詳細を見る",
-    
-    "rooms_badge": "パッケージに含まれる宿泊",
+
+    // Accommodations & Rooms
+    "rooms_badge": "🏨 パッケージに含まれる宿泊",
     "rooms_title": "ホテルと客室カテゴリー",
     "rooms_sub": "快適で思い出に残る旅にするためのお好みの客室をお選びください！",
+    "rooms_quote": "「サクラトリップでは、ドアを開けた瞬間から旅が始まります。」",
+    "hotel_tokyo_nights": "東京 4泊分含む",
+    "hotel_kyoto_nights": "京都 2泊分含む",
+    "hotel_osaka_nights": "大阪 3泊分含む",
+    "room_from": "1泊あたり",
+    "room_per": "〜",
     "btn_select_room": "部屋を選択",
-    
-    "itinerary_badge": "全日程プログラム",
+    "rooms_footnote": "* 記載の料金は部屋ごとの概算であり、空室状況により変動する場合があります。",
+
+    // Itinerary & Tips
+    "itinerary_badge": "🗺️ 全日程プログラム",
     "itinerary_title": "日本10日間の日別ツアースケジュール",
     "itinerary_sub": "日本の春を存分に楽しめるよう Sakura Trip が綿密に計画しました。",
-    
-    "tips_badge": "旅行の準備",
+    "tips_badge": "🎒 旅行の準備",
     "tips_title": "SAKURA TRIP TIPS: 持ち物リスト",
     "tips_progress": "荷造り進捗状況",
     "tips_mark_all": "すべて選択",
     "tips_reset": "リセット",
-    
-    "cta_badge": "予約期限のご案内",
+
+    // CTA Deadline Banner
+    "cta_badge": "🌸 予約期限のご案内",
     "cta_title": "憧れの日本旅行の席を今すぐ確保しましょう！",
-    "cta_desc": "予約締め切りは2027年1月10日です。桜シーズンの枠には限りがあります。",
+    "cta_desc": "予約締め切りは<strong>2027年1月10日</strong>です。桜シーズンの枠には限りがあります。",
     "btn_cta_reserve": "事前予約へ進む",
     "btn_cta_sayuri": "AIアシスタント さゆりと話す"
   }

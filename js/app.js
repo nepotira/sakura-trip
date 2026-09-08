@@ -321,21 +321,42 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const key = el.getAttribute('data-i18n');
             if (dict[key]) {
-                // If element has inner icons, preserve them
-                const icon = el.querySelector('i');
-                if (icon) {
-                    const iconHTML = icon.outerHTML;
-                    el.innerHTML = `${iconHTML} ${dict[key]}`;
+                const val = dict[key];
+                if (val.includes('<')) {
+                    el.innerHTML = val;
                 } else {
-                    el.textContent = dict[key];
+                    const icon = el.querySelector('i');
+                    if (icon) {
+                        el.innerHTML = `${icon.outerHTML} ${val}`;
+                    } else {
+                        el.textContent = val;
+                    }
                 }
             }
         });
 
+        // Localize search form inputs
+        const inputOriginEl = document.getElementById('inputOrigin');
+        const inputDestEl = document.getElementById('inputDest');
+        const inputDatesEl = document.getElementById('inputDates');
+
+        if (inputOriginEl) {
+            inputOriginEl.value = lang === 'ja' ? 'サンパウロ (GRU)' : 'São Paulo (GRU)';
+        }
+        if (inputDestEl) {
+            inputDestEl.value = lang === 'ja' ? '東京・羽田 (HND)' : (lang === 'en' ? 'Tokyo (HND)' : 'Tóquio (HND)');
+        }
+        if (inputDatesEl) {
+            inputDatesEl.value = lang === 'ja' ? '2027年4月10日〜20日' : (lang === 'en' ? '04/10/2027 to 04/20/2027' : '10/04/2027 a 20/04/2027');
+        }
+
+        // Translate traveler summary pill
+        updateTravelersSummary();
+
         // Re-align sliding indicator after text length change
         setTimeout(() => {
             const activeLink = document.querySelector('.nav-link.active');
-            if (activeLink) updateNavIndicator(activeLink);
+            if (activeLink && typeof updateNavIndicator === 'function') updateNavIndicator(activeLink);
         }, 50);
 
         showToast(lang === 'ja' ? '言語が日本語に切り替わりました 🇯🇵' : (lang === 'en' ? 'Language switched to English 🇺🇸' : 'Idioma alterado para Português 🇧🇷'));
@@ -528,9 +549,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function updateTravelersSummary() {
-        let txt = `${state.travelers.adults} Adulto${state.travelers.adults > 1 ? 's' : ''}`;
-        if (state.travelers.children > 0) txt += `, ${state.travelers.children} Criança${state.travelers.children > 1 ? 's' : ''}`;
-        if (state.travelers.infants > 0) txt += `, ${state.travelers.infants} Bebê${state.travelers.infants > 1 ? 's' : ''}`;
+        let txt = "";
+        if (state.lang === 'ja') {
+            txt = `大人 ${state.travelers.adults}名`;
+            if (state.travelers.children > 0) txt += `、子供 ${state.travelers.children}名`;
+            if (state.travelers.infants > 0) txt += `、幼児 ${state.travelers.infants}名`;
+        } else if (state.lang === 'en') {
+            txt = `${state.travelers.adults} Adult${state.travelers.adults > 1 ? 's' : ''}`;
+            if (state.travelers.children > 0) txt += `, ${state.travelers.children} Child${state.travelers.children > 1 ? 'ren' : ''}`;
+            if (state.travelers.infants > 0) txt += `, ${state.travelers.infants} Infant${state.travelers.infants > 1 ? 's' : ''}`;
+        } else {
+            txt = `${state.travelers.adults} Adulto${state.travelers.adults > 1 ? 's' : ''}`;
+            if (state.travelers.children > 0) txt += `, ${state.travelers.children} Criança${state.travelers.children > 1 ? 's' : ''}`;
+            if (state.travelers.infants > 0) txt += `, ${state.travelers.infants} Bebê${state.travelers.infants > 1 ? 's' : ''}`;
+        }
         if (travelersSummary) travelersSummary.textContent = txt;
         updateAllPricesOnPage();
     }
