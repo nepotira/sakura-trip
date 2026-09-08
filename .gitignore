@@ -12,6 +12,7 @@ data/config.json
 
 # Logs & System
 *.log
+push-to-github.bat
 .system_generated/
 .DS_Store
 Thumbs.db
